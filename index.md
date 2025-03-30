@@ -14,7 +14,7 @@ title: "Tổng hợp kiến thức 📚"
   });">
 </script>
 
-# **I. Phần số học**
+# **I. PHẦN SỐ HỌC**
 
 ### **1. Kiểm tra số nguyên tố**
 
@@ -124,4 +124,10 @@ void sieve(int n)
 ```
 Dưới đây là hình minh họa cho cải tiến trên. *Nguồn: [Wikipedia](https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes)*
 
-![Sàng Eratosthenes](https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Animation_Sieb_des_Eratosthenes_(vi).gif)
+![Sàng Eratosthenes](https://upload.wikimedia.org/wikipedia/commons/b/b8/Animation_Sieb_des_Eratosthenes_%28vi%29.gif)
+
+# II. CHẶT NHỊ PHÂN
+
+# III. QUY HOẠCH ĐỘNG
+
+# IV. ĐỒ THỊ
