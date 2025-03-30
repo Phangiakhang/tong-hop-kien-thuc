@@ -16,7 +16,6 @@ title: "Tổng hợp kiến thức 📚"
 
 # **📌 MỤC LỤC**
 
-- [**📌 MỤC LỤC**](#-mục-lục)
 - [**I. PHẦN SỐ HỌC**](#i-phần-số-học)
 		- [**1. Kiểm tra số nguyên tố**](#1-kiểm-tra-số-nguyên-tố)
 		- [**2. Sàng nguyên tố Eratosthenes (Sieve of Eratosthenes)**](#2-sàng-nguyên-tố-eratosthenes-sieve-of-eratosthenes)
