@@ -224,6 +224,12 @@ Tất cả các hàm iterator này đều có độ phức tạp là $O(1)$.
 
 Một container là một đối tượng cụ thể lưu trữ một tập hợp các đối tượng khác (các phần tử của nó). Nó được thực hiện như các lớp mẫu (class templates).
 
+Container quản lý không gian lưu trữ cho các phần tử của nó và cung cấp một hàm thành viên (member function) để truy cập tới chúng, hoặc trực tiếp thông qua các biến lặp (iterator).
+
+Container có các cấu trúc thường sử dụng trong lập trình như: mảng động - dynamic arrays (vector), hàng đợi - queues (queue), hàng đợi ưu tiên - heaps (priority queue), danh sách liên kết - linked list (list), cây - tree (set), mảng ánh xạ - associative arrays (map), $\dots$
+
+Nhiều container chưa một số hàm thành viên giống nhau. Quyết định sử dụng container nào cho nhu cầu cụ thể nói chung không chỉ phụ thuộc vào các hàm được cung cấp mà còn dựa vào độ hiệu quả của các hàm thành viên của nó (độ phức tạp của các hàm). Điều này đặc biệt đúng với container dãy (sequence containers), mà trong đó có sự khác nhau về độ phức tạp đối với các thao tác chèn/xóa phần tử hay truy cập phần tử.
+
 # **III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**
 
 ### **1. Cây phân đoạn - Segment tree**
