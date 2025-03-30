@@ -91,7 +91,7 @@ void sieve(int n)
 	prime[0] = prime[1] = false;
 	for (int i = 2 ; i <= n ; ++i) {
 		if (prime[i]) {
-			for (int j = i+i ; j <= n ; j += i)
+			for (int j = i*2 ; j <= n ; j += i)
 				prime[j] = false;
 		}
 	}
@@ -106,3 +106,21 @@ void sieve(int n)
 > Nếu như $p < X < p^2$, ta có $1 < k < p$. Ta suy ra $k$ phải có một ước nguyên tố nhỏ hơn $p$.  
 > Vì thế, $X = k \cdot p$ đã bị sàng loại đi trong các vòng lặp trước đó và ta **chỉ cần xét $X \geq p^2$.**
 
+Dựa vào *nhận xét* trên, ta có cải tiến như sau:
+```cpp
+const int maxn = 1e6 + 7;
+vector <bool> prime(maxn, true);
+void sieve(int n)
+{
+	prime[0] = prime[1] = false;
+	for (int i = 2 ; i * i <= n ; ++i) {
+		if (prime[i]) {
+			for (int j = i*i ; j <= n ; j += i)
+				prime[j] = false;
+		}
+	}
+}
+```
+Dưới đây là hình minh họa cho cải tiến trên. *Nguồn: [Wikipedia](https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes)*
+
+![Sàng Eratosthenes](https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Animation_Sieb_des_Eratosthenes_(vi).gif)
