@@ -1,6 +1,6 @@
 # **I. Phần số học**
 
-## 1. Kiểm tra số nguyên tố
+### 1. Kiểm tra số nguyên tố
 *a. Thuật toán cơ bản O(n)*
 
 Cách đơn giản nhất để kiểm tra tính nguyên tố của số tự nhiên là trực tiếp sử dụng định nghĩa số nguyên tố:
