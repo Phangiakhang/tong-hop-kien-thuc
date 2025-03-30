@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 ---
 title: "Tài liệu Tin học"
 author: "Tên của bạn"
