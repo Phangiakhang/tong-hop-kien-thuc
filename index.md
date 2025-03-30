@@ -222,7 +222,7 @@ Tất cả các hàm iterator này đều có độ phức tạp là $O(1)$.
 
 ## **2. CONTAINER**
 
-Một container là một đối tượng cụ thể lưu trữ một tập hợp các đối tượng khác (các phần tử của nó).
+Một container là một đối tượng cụ thể lưu trữ một tập hợp các đối tượng khác (các phần tử của nó). Nó được thực hiện như các lớp mẫu (class templates).
 
 # **III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**
 
@@ -287,10 +287,10 @@ Cài đặt:
 ```cpp
 vector <vector<int>> dp(n+1, vector<int>(S+1, 0))
 for (int i = 1 ; i <= n ; ++i) {
-		for (int j = 1 ; j <= S ; ++j) {
-				dp[i][j] = dp[i-1][j];
-				if (j >= w[i])
-						dp[i][j] = max(dp[i][j], dp[i-1][j-w[i]] + v[i]);
+	for (int j = 1 ; j <= S ; ++j) {
+		dp[i][j] = dp[i-1][j];
+		if (j >= w[i])
+			dp[i][j] = max(dp[i][j], dp[i-1][j-w[i]] + v[i]);
 		}
 }
 cout << dp[n][S] << "\n";
