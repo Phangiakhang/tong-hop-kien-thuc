@@ -1,8 +1,6 @@
-<head>
-  <title>Tổng hợp kiến thức 📚</title>
-  <link rel="icon" href="https://raw.githubusercontent.com/Phangiakhang/tong-hop-kien-thuc/main/favicon.ico" type="image/x-icon">
-  <!-- Các liên kết khác -->
-</head>
+---
+title: "Tổng hợp kiến thức 📚"
+---
 
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -209,6 +207,20 @@ Thư viện STL gồm 4 phần chính:
 
 ### **5. Tổng tiền tố - Suffix Array**
 
+*a. Tổng tiền tố mảng 1 chiều - 2D Suffix Array*
+
+Cài đặt tiền xử lí:
+```cpp
+vector <int> p(n+1);
+for (int i = 1 ; i <= n ; ++i)
+	p[i] = p[i-1]+a[i];
+```
+
+Một số ứng dụng:
+
+Tính nhanh tổng đoạn $[a_{i}, a_{i+1},\dots,a_{j}]$
+> s = p[j] - p[i-1];
+
 ### **6. Cửa sổ trượt - Sliding Window**
 
 ### **7. Kỹ thuật 2 con trỏ - Two-pointer technique**
@@ -321,7 +333,14 @@ void bfs(int s)
 
 Cài đặt:
 ```cpp
-// Code
+int cnt = 0;
+for (int i = 1 ; i <= n ; ++i) {
+	if (!vis[i]) {
+		bfs(i); // hoặc dfs(i)
+		++cnt;
+	}
+}
+cout << cnt << "\n";
 ```
 
 ### **4. Tìm đường đi trên đồ thị không trọng số**
@@ -346,7 +365,7 @@ Cài đặt:
 
 Cài đặt:
 ```cpp
-// Code
+
 ```
 
 *b. Cài đặt BFS*
