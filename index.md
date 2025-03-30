@@ -193,7 +193,32 @@ Thư viện STL gồm 4 phần chính:
   
 ## **1. ITERATOR**
 
+Iterator (Con trỏ lặp) là một con tror dùng để trỏ tới các phần tử của các Container (CTDL lưu trữ) trong thư viện STL. Mỗi container có một iterator của nó.
 
+Iterator thường dùng để duyệt (lặp) qua các phần tử của container bằng cách sử dụng phép so sánh và các phép toán trên con trỏ với iterator.
+
+Vì Iterator là con trỏ nên có thể sử dụng các phép toán và thao tác tương tự như một con trỏ.
+
+> Phép so sánh: bằng (==) hoặc khác (!=)  
+> Phép gán: =  
+> Phép toán: cộng (+) hoặc trừ (-) với các số nguyên  
+> Phép lấy giá trị: *
+
+Khai báo Iterator:
+```cpp
+// Khai báo 
+<Kiểu container>::iterator it;
+// Trỏ đến phần tử đầu tiên của container
+it = <tên container>.begin();
+// Trỏ đến vị trí kết thúc của container (vị trí ngay sau phần tử cuối cùng)
+it = <tên container>.end();
+// Duyệt qua container
+for (it = <tên container>.begin() ; it != <tên container>.end() ; ++it) {
+	// Code
+}
+```
+Tất cả các hàm iterator này đều có độ phức tạp là $O(1)$.
+> Các đối tượng của thư viện STL thuộc các lớp (Class) trong **namespace std**. Do đó, để thuận tiện khi lập trình, chúng ta nên thêm dòng **using namespace std;** vào đầu chương trình
 
 # **III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**
 
@@ -207,7 +232,7 @@ Thư viện STL gồm 4 phần chính:
 
 ### **5. Tổng tiền tố - Suffix Array**
 
-*a. Tổng tiền tố mảng 1 chiều - 2D Suffix Array*
+*a. Tổng tiền tố mảng 1 chiều - 1D Suffix Array*
 
 Cài đặt tiền xử lí:
 ```cpp
@@ -218,7 +243,9 @@ for (int i = 1 ; i <= n ; ++i)
 
 Một số ứng dụng:
 
-Tính nhanh tổng đoạn $[a_{i}, a_{i+1},\dots,a_{j}]$:&nbsp;&nbsp;$\boxed{p[j] - p[i-1]}$
+Tính nhanh tổng đoạn $[a_{i}, a_{i+1},\dots,a_{j}]$: $\boxed{p[j] - p[i-1]}$
+
+*b. Tổng tiền tố mảng 2 chiều - 2D Suffix Array*
 
 ### **6. Cửa sổ trượt - Sliding Window**
 
