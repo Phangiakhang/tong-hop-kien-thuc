@@ -13,7 +13,7 @@ date: "2025-03-29"
 ---
 
 # Giới thiệu  
-Đây là tài liệu tin học viết bằng Markdown với giao diện gần giống HackMD.
+Đây là tài liệu tin học 
 
 ## Cấu trúc tài liệu  
 - **Hỗ trợ danh sách**  
