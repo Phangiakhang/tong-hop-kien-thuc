@@ -236,3 +236,41 @@ void bfs(int s)
 	}
 }
 ```
+### **3. Đếm số thành phần liên thông của đồ thị vô hướng**
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **4. Tìm đường đi trên đồ thị không trọng số**
+
+*a. Tìm đường đi ngắn nhất - BFS*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+*b. Tìm đường đi dài nhất - DFS*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **5. Thuật toán loang (Flood Fill)
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **6. Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1 (01BFS)**
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **7.**
