@@ -23,8 +23,17 @@ title: "Tổng hợp kiến thức 📚"
 Cách đơn giản nhất để kiểm tra tính nguyên tố của số tự nhiên là trực tiếp sử dụng định nghĩa số nguyên tố:
 > Số tự nhiên $n \geq 2$ là số nguyên tố khi và chỉ khi $n$ không chia hết cho các số tự nhiên $2, 3, ..., n-1$.
 
-<div class="math">
-$$
-I = \int_{0}^{1} \left( \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} x^n \right) dx = \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n(n+1)}
-$$
-</div>
+Code:
+```cpp
+bool prime(int n)
+{
+    if (n < 2) return false;
+    for (int i = 2; i < n; ++i)
+        if (n % i == 0)
+            return false;
+    return true;
+}
+```
+*b. Thuật toán tối ưu O($\sqrt{n}$)*
+
+Để tối ưu thuật toán trên, nhận xét rằng nếu $n$ có một ước $d$ sao cho $n-1 \geq d \geq \sqrt{n}$ thì $\dfrac {n}{d}$ cũng là ước của $n$ và có $1 < \dfrac {n}{d} \leq \sqrt{n}.$
