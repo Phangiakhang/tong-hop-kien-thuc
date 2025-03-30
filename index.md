@@ -5,14 +5,16 @@ title: "Tổng hợp kiến thức 📚"
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.body, {
-    delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false}
-    ],
-    ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-  });">
+	onload="renderMathInElement(document.body, {
+		delimiters: [
+			{left: '$$', right: '$$', display: true},
+			{left: '$', right: '$', display: false}
+		],
+		ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+	});">
 </script>
+
+[TOC]
 
 # **I. PHẦN SỐ HỌC**
 
@@ -27,11 +29,11 @@ Cài đặt:
 ```cpp
 bool prime(int n)
 {
-  if (n < 2) return false;
-  for (int i = 2; i < n; ++i)
-    if (n % i == 0)
-      return false;
-  return true;
+	if (n < 2) return false;
+	for (int i = 2; i < n; ++i)
+		if (n % i == 0)
+			return false;
+	return true;
 }
 ```
 *b. Thuật toán tối ưu $O(\sqrt{n})$*
@@ -42,11 +44,11 @@ Cài đặt:
 ```cpp
 bool prime(int n)
 {
-  if (n < 2) return false;
-  for (int i = 2; i*i <= n; ++i)
-    if (n % i == 0)
-      return false;
-  return true;
+	if (n < 2) return false;
+	for (int i = 2; i*i <= n; ++i)
+		if (n % i == 0)
+			return false;
+	return true;
 }
 ```
 *c. Thuật toán nâng cao*
@@ -57,14 +59,14 @@ Cài đặt:
 ```cpp
 bool prime(int n)
 {
-  if (n == 2 || n == 3)
-    return true;
-  if (n < 3 || n % 2 == 0 || n % 3 == 0)
-    return false;
-  for (int i = 5; i * i <= n; i += 6)
-    if (n % i == 0 || n % (i + 2) == 0)
-      return false;
-  return true;
+	if (n == 2 || n == 3)
+		return true;
+	if (n < 3 || n % 2 == 0 || n % 3 == 0)
+		return false;
+	for (int i = 5; i * i <= n; i += 6)
+		if (n % i == 0 || n % (i + 2) == 0)
+			return false;
+	return true;
 }
 ```
 **Chú ý:** Có thể sử dụng nhiều số nguyên tố đầu tiên để tối ưu thuật toán hơn. Về lý thuyết, nếu $k$ là số số nguyên tố được dùng càng lớn thì vòng lặp chạy càng nhanh. Tuy nhiên, với $k = 50$, độ phức tạp vòng lặp ***for***  là $O(\dfrac {\sqrt{n}}{10})$. Và kể cả với $k = 6 \cdot 10^5$ thì độ phức tạp thuật của vòng lặp ***for***  vẫn là $O(\dfrac {\sqrt{n}}{30})$.
@@ -79,8 +81,8 @@ Khi cần tìm ra các số nguyên tố từ $1$ đến $n$, ta có thể duy�
 
 - Ban đầu, ta cho tất cả số từ $2$ đến $n$ vào sàng và đánh dấu tất cả các số. (Các số không được đánh dấu sau cùng sẽ bị loại khỏi sàng).
 - Duyệt lần lượt các số từ $2$ đến $n$. Nếu số đang xét:
-  - Đã được đánh dấu $\Rightarrow$ số nguyên tố: ta bỏ đánh dấu tất cả các bội (khác chính nó) của số nguyên tố này để loại các bội ấy ra khỏi sàng.
-  - Không được đánh dấu $\Rightarrow$ hợp số: ta bỏ qua số này.
+	- Đã được đánh dấu $\Rightarrow$ số nguyên tố: ta bỏ đánh dấu tất cả các bội (khác chính nó) của số nguyên tố này để loại các bội ấy ra khỏi sàng.
+	- Không được đánh dấu $\Rightarrow$ hợp số: ta bỏ qua số này.
 - Sau khi duyệt xong các số còn lại trong sàng, hay nói cách khác các số được đánh dấu là số nguyên tố.
 
 Cài đặt:
@@ -89,13 +91,13 @@ const int maxn = 1e6 + 7;
 vector <bool> prime(maxn, true);
 void sieve(int n)
 {
-  prime[0] = prime[1] = false;
-  for (int i = 2 ; i <= n ; ++i) {
-    if (prime[i]) {
-      for (int j = i*2 ; j <= n ; j += i)
-        prime[j] = false;
-    }
-  }
+	prime[0] = prime[1] = false;
+	for (int i = 2 ; i <= n ; ++i) {
+		if (prime[i]) {
+			for (int j = i*2 ; j <= n ; j += i)
+				prime[j] = false;
+		}
+	}
 }
 ```
 **Độ phức tạp thời gian: $O(n \log(\log n))$**
@@ -113,13 +115,13 @@ const int maxn = 1e6 + 7;
 vector <bool> prime(maxn, true);
 void sieve(int n)
 {
-  prime[0] = prime[1] = false;
-  for (int i = 2 ; i * i <= n ; ++i) {
-    if (prime[i]) {
-      for (int j = i*i ; j <= n ; j += i)
-        prime[j] = false;
-    }
-  }
+	prime[0] = prime[1] = false;
+	for (int i = 2 ; i * i <= n ; ++i) {
+		if (prime[i]) {
+			for (int j = i*i ; j <= n ; j += i)
+				prime[j] = false;
+		}
+	}
 }
 ```
 Dưới đây là hình minh họa cho cải tiến trên. *Nguồn: [Wikipedia](https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes)*
@@ -138,8 +140,8 @@ Cài đặt:
 ```cpp
 vector <int> dp(n+1, 1);
 for (int i = 1 ; i <= n ; ++i) {
-  for (int j = 1 ; j < i ; ++j)
-    dp[i] = max(dp[i], dp[i-1] + 1);
+	for (int j = 1 ; j < i ; ++j)
+		dp[i] = max(dp[i], dp[i-1] + 1);
 }
 ```
 
@@ -158,11 +160,11 @@ Cài đặt:
 ```cpp
 vector <vector<int>> dp(n+1, vector<int>(S+1, 0))
 for (int i = 1 ; i <= n ; ++i) {
-    for (int j = 1 ; j <= S ; ++j) {
-        dp[i][j] = dp[i-1][j];
-        if (j >= w[i])
-            dp[i][j] = max(dp[i][j], dp[i-1][j-w[i]] + v[i]);
-    }
+		for (int j = 1 ; j <= S ; ++j) {
+				dp[i][j] = dp[i-1][j];
+				if (j >= w[i])
+						dp[i][j] = max(dp[i][j], dp[i-1][j-w[i]] + v[i]);
+		}
 }
 cout << dp[n][S] << "\n";
 ```
@@ -174,11 +176,11 @@ Cài đặt:
 set <int> s;
 while (n>0)
 {
-    if (dp[n][S]-dp[n-1][S] != 0) {
-        s.insert(n);
-        S -= w[n];
-    }
-    n--;    
+		if (dp[n][S]-dp[n-1][S] != 0) {
+				s.insert(n);
+				S -= w[n];
+		}
+		n--;    
 }
 for (auto x:s) cout << w[x] << " " << v[x] << "\n";
 ```
@@ -192,12 +194,12 @@ Cài đặt:
 vector <bool> vis(maxn, false);
 void dfs(int u)
 {
-  cout << u << " ";
-  vis[u] = true;
-  for (auto v : adj[u]) {
-    if (!vis[v]) 
-      dfs(v);
-  }
+	cout << u << " ";
+	vis[u] = true;
+	for (auto v : adj[u]) {
+		if (!vis[v]) 
+			dfs(v);
+	}
 }
 ```
 ### **2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)**
@@ -207,20 +209,20 @@ Cài đặt:
 vector <bool> vis(maxn, false);
 void bfs(int s)
 {
-  queue <int> q;
-  q.push(s);
-  vis[s] = true;
+	queue <int> q;
+	q.push(s);
+	vis[s] = true;
 
-  while (!q.empty()) {
-    int u = q.front();
-    q.pop()
+	while (!q.empty()) {
+		int u = q.front();
+		q.pop()
 
-    for (auto v : adj[u]) {
-      if (!vis[v]) {
-        q.push(v);
-        vis[v];
-      }
-    }
-  }
+		for (auto v : adj[u]) {
+			if (!vis[v]) {
+				q.push(v);
+				vis[v];
+			}
+		}
+	}
 }
 ```
