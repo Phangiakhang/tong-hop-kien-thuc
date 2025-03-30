@@ -67,3 +67,6 @@ bool prime(int n)
 	return true;
 }
 ```
+**Chú ý:** Có thể sử dụng nhiều số nguyên tố đầu tiên để tối ưu thuật toán hơn. Về lý thuyết, nếu $k$ là số số nguyên tố được dùng càng lớn thì vòng lặp chạy càng nhanh. Tuy nhiên, với $k = 50$, độ phức tạp vòng lặp ***for*** là $O(\dfrac {\sqrt{n}}{10})$. Và kể cả với $k = 6.10^5$ thì độ phức tạp thuật của vòng lặp ***for*** vẫn là $O(\dfrac {\sqrt{n}}{30})$.
+
+Do đó thuật toán này có thể không đủ nhanh để giải quyết giới hạn $n \leq 10^{18}$, hoặc $n \leq 10^9$ nhưng phải kiểm tra $10^6$ số $n$ trở lên. Để giải quyết các bài toán có giới hạn lớn như thế, ta phải sử dụng đến các phương pháp xác suất.ac
