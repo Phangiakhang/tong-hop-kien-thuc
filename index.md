@@ -25,7 +25,13 @@ title: "Tổng hợp kiến thức 📚"
 - [ĐỒ THỊ](#iv-đồ-thị)
   - [DFS](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
   - [BFS](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
-
+  - [Đếm số thành phần liên thông của đồ thị vô hướng](#3-đếm-số-thành-phần-liên-thông-của-đồ-thị-vô-hướng)
+  - [Tìm đường đi ngắn nhất trên đồ thị không trọng số](#4-tìm-đường-đi-trên-đồ-thị-không-trọng-số)
+  - [Thuật toán loang](#5-thuật-toán-loang-flood-fill)
+  - [Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 và 1](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
+  - [Tìm đường đi ngắn nhất trên ma trận](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
+  - [Sắp xếp Topo - Thuật toán Kahn](#8-sắp-xếp-topo---thuật-toán-kahn)
+  - [Kiểm tra chu trình của đồ thị](#9-kiểm-tra-chu-trình-của-đồ-thị)
 # **I. PHẦN SỐ HỌC**
 
 ### **1. Kiểm tra số nguyên tố**
@@ -261,6 +267,15 @@ Cài đặt:
 
 ### **5. Thuật toán loang (Flood Fill)
 
+*a. Cài đặt DFS*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+*b. Cài đặt BFS*
+
 Cài đặt:
 ```cpp
 // Code
@@ -273,4 +288,50 @@ Cài đặt:
 // Code
 ```
 
-### **7.**
+### **7. Tìm đường đi ngắn nhất trên ma trận**
+
+*a. Cài đặt DFS*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+*b Cài đặt BFS*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **8. Sắp xếp Topo - Thuật toán Kahn**
+
+*a. Sắp xếp topo dựa trên DFS*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+*b. Thuật toán Kahn - Xóa dần đỉnh*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **9. Kiểm tra chu trình của đồ thị**
+
+*a. Đồ thị vô hướng*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+*b. Đồ thị có hướng*
+
+Cài đặt:
+```cpp
+// Code
+```
