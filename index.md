@@ -124,15 +124,32 @@ void sieve(int n)
 ```
 Dưới đây là hình minh họa cho cải tiến trên. *Nguồn: [Wikipedia](https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes)*
 
-<div style="border: 2px solid black; display: inline-block; padding: 5px;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Animation_Sieb_des_Eratosthenes_%28vi%29.gif">
-</div>
+![Sàng Eratosthenes](https://upload.wikimedia.org/wikipedia/commons/b/b8/Animation_Sieb_des_Eratosthenes_%28vi%29.gif)
 
 # **II. CHẶT NHỊ PHÂN**
 
-# **III. QUY HOẠCH ĐỘNG**
+# **III. QUY HOẠCH ĐỘNG - *DYNAMIC PROGRAMMING (DP)***
 
 ### **1. Dãy con tăng dài nhất - *Longest Increasing Subsequence (LIS)***
 
+*a. Thuật cơ bản $O(n^2)$*
+
+Cài đặt:
+```cpp
+vector <int> dp(n+1, 1);
+for (int i = 1 ; i <= n ; ++i) {
+	for (int j = 1 ; j < i ; ++j)
+		dp[i] = max(dp[i], dp[i-1] + 1);
+}
+```
+
+*b. Thuật tối ưu $O(n \log n)$*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **2. Vali B - *Knapsack 01 (Balo 01)***
 
 # **IV. ĐỒ THỊ**
