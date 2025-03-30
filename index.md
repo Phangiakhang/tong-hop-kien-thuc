@@ -1,6 +1,8 @@
----
-title: "Tổng hợp kiến thức 📚"
----
+<head>
+  <title>Tổng hợp kiến thức 📚</title>
+  <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+  <!-- Các liên kết khác -->
+</head>
 
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
