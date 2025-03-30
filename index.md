@@ -9,7 +9,8 @@ title: "Tổng hợp kiến thức 📚"
       delimiters: [
           {left: '$$', right: '$$', display: true},
           {left: '$', right: '$', display: false}
-      ]
+      ],
+      ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
   });">
 </script>
 
@@ -22,6 +23,8 @@ title: "Tổng hợp kiến thức 📚"
 Cách đơn giản nhất để kiểm tra tính nguyên tố của số tự nhiên là trực tiếp sử dụng định nghĩa số nguyên tố:
 > Số tự nhiên $n \geq 2$ là số nguyên tố khi và chỉ khi $n$ không chia hết cho các số tự nhiên $2, 3, ..., n-1$.
 
-$$\frac{n}/{n+1}$$
-
-$$n \geq 2$$
+<div class="math">
+$$
+I = \int_{0}^{1} \left( \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} x^n \right) dx = \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n(n+1)}
+$$
+</div>
