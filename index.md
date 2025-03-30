@@ -56,7 +56,7 @@ title: "Tổng hợp kiến thức 📚"
 	- [12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
 	- [13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)](#13-thuật-toán-prim-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
 	- [14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)](#14-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
-	- [15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số](#15-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số)
+	- [15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số không âm](#15-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-không-âm)
 	- [16. Chu trình Euler và đường đi Euler](#16-chu-trình-euler-và-đường-đi-euler)
 	- [17. Chu trình Hamilton](#17-chu-trình-hamilton)
 
@@ -199,26 +199,30 @@ Iterator thường dùng để duyệt (lặp) qua các phần tử của contai
 
 Vì Iterator là con trỏ nên có thể sử dụng các phép toán và thao tác tương tự như một con trỏ.
 
-> Phép so sánh: bằng (==) hoặc khác (!=)  
-> Phép gán: =  
-> Phép toán: cộng (+) hoặc trừ (-) với các số nguyên  
-> Phép lấy giá trị: *
+- Phép so sánh: bằng (==) hoặc khác (!=)  
+- Phép gán: =  
+- Phép toán: cộng (+) hoặc trừ (-) với các số nguyên  
+- Phép lấy giá trị: *
 
 Khai báo Iterator:
 ```cpp
 // Khai báo 
-<Kiểu container>::iterator it;
+<Kiểu_container>::iterator it;
 // Trỏ đến phần tử đầu tiên của container
-it = <tên container>.begin();
+it = <tên_container>.begin();
 // Trỏ đến vị trí kết thúc của container (vị trí ngay sau phần tử cuối cùng)
-it = <tên container>.end();
+it = <tên_container>.end();
 // Duyệt qua container
-for (it = <tên container>.begin() ; it != <tên container>.end() ; ++it) {
+for (it = <tên_container>.begin() ; it != <tên_container>.end() ; ++it) {
 	// Code
 }
 ```
 Tất cả các hàm iterator này đều có độ phức tạp là $O(1)$.
 > Các đối tượng của thư viện STL thuộc các lớp (Class) trong **namespace std**. Do đó, để thuận tiện khi lập trình, chúng ta nên thêm dòng **using namespace std;** vào đầu chương trình
+
+## **2. CONTAINER**
+
+Một container là một đối tượng cụ thể lưu trữ một tập hợp các đối tượng khác (các phần tử của nó).
 
 # **III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**
 
@@ -486,11 +490,35 @@ Cài đặt:
 // Code
 ```
 
-### **15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số**
+### **15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số không âm**
 
 Cài đặt:
 ```cpp
-// Code
+const int INF = numeric_limits<int>::max();
+vector <int> dp(maxn, INF);
+void dijkstra(int s)
+{
+    dp[s] = 0;
+    priority_queue <ii, vii, greater<ii>> pq;
+    pq.push({0, s});
+
+    while (!pq.empty()) {
+        ii top = pq.top();
+        int u = top.se;
+        ll len = top.fi;
+
+        if (len > dp[u]) continue;
+        for (auto it : adj[u]) {
+            int v = it.fi;
+            ll w = it.se;
+
+            if (dp[v] > dp[u] + w) {
+                dp[v] = dp[u] + w;
+                pq.push({dp[v], v});
+            }
+        }
+    }
+}
 ```
 
 ### **16. Chu trình Euler và đường đi Euler**
