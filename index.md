@@ -128,9 +128,9 @@ Dưới đây là hình minh họa cho cải tiến trên. *Nguồn: [Wikipedia]
 
 # **II. CHẶT NHỊ PHÂN**
 
-# **III. QUY HOẠCH ĐỘNG - *DYNAMIC PROGRAMMING (DP)***
+# **III. QUY HOẠCH ĐỘNG - DYNAMIC PROGRAMMING (DP)**
 
-### **1. Dãy con tăng dài nhất - *Longest Increasing Subsequence (LIS)***
+### **1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)**
 
 *a. Thuật cơ bản $O(n^2)$*
 
@@ -150,6 +150,77 @@ Cài đặt:
 // Code
 ```
 
-### **2. Vali B - *Knapsack 01 (Balo 01)***
+### **2. Vali B - Knapsack 01 (Balo 01)**
+
+*a. Tìm giá trị lớn nhất*
+
+Cài đặt: 
+```cpp
+vector <vector<int>> dp(n+1, vector<int>(S+1, 0))
+for (int i = 1 ; i <= n ; ++i) {
+    for (int j = 1 ; j <= S ; ++j) {
+        dp[i][j] = dp[i-1][j];
+        if (j >= w[i])
+            dp[i][j] = max(dp[i][j], dp[i-1][j-w[i]] + v[i]);
+    }
+}
+cout << dp[n][S] << "\n";
+```
+
+*b. Truy vết*
+
+Cài đặt:
+```cpp
+set <int> s;
+while (n>0)
+{
+    if (dp[n][S]-dp[n-1][S] != 0) {
+        s.insert(n);
+        S -= w[n];
+    }
+    n--;    
+}
+for (auto x:s) cout << w[x] << " " << v[x] << "\n";
+```
 
 # **IV. ĐỒ THỊ**
+
+### **1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)
+
+Cài đặt:
+```cpp
+vector <bool> vis(maxn, false);
+void dfs(int u)
+{
+	cout << u << " ";
+	vis[u] = true;
+	for (auto v : adj[u]) {
+		if (!vis[v]) 
+			dfs(v);
+	}
+}
+```
+### **2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)**
+
+Cài đặt:
+```cpp
+vector <bool> vis(maxn, false);
+void bfs(int s)
+{
+	queue <int> q;
+	q.push(s);
+	vis[s] = true;
+
+	while (!q.empty()) {
+		int u = q.front();
+		q.pop()
+
+		for (auto v : adj[u]) {
+			if (!vis[v]) {
+				q.push(v);
+				vis[v];
+			}
+		}
+	}
+}
+```
