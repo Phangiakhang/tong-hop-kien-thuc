@@ -16,29 +16,32 @@ title: "Tổng hợp kiến thức 📚"
 
 # **📌 MỤC LỤC**
 
-- [PHẦN SỐ HỌC](#i-phần-số-học)
-  - [Kiểm tra số nguyên tố](#1-kiểm-tra-số-nguyên-tố)
-- [CHẶT NHỊ PHÂN](#ii-chặt-nhị-phân)
-- [QUY HOẠCH ĐỘNG](#iii-quy-hoạch-động---dynamic-programming-dp)
-  - [Dãy con tăng dài nhất](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
-  - [Knapsack 01](#2-vali-b---knapsack-01-balo-01)
-- [ĐỒ THỊ](#iv-đồ-thị)
-  - [DFS](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
-  - [BFS](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
-  - [Đếm số thành phần liên thông của đồ thị vô hướng](#3-đếm-số-thành-phần-liên-thông-của-đồ-thị-vô-hướng)
-  - [Tìm đường đi ngắn nhất trên đồ thị không trọng số](#4-tìm-đường-đi-trên-đồ-thị-không-trọng-số)
-  - [Thuật toán loang](#5-thuật-toán-loang-flood-fill)
-  - [Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 và 1](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
-  - [Tìm đường đi ngắn nhất trên ma trận](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
-  - [Sắp xếp Topo - Thuật toán Kahn](#8-sắp-xếp-topo---thuật-toán-kahn)
-  - [Kiểm tra chu trình của đồ thị](#9-kiểm-tra-chu-trình-của-đồ-thị)
-  - [](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
-  - [](#11-disjoint-set-union---dsu)
-  - [](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
-  - [](#13-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
-  - [](#14-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số)
-  - [](#15-chu-trình-euler-và-đường-đi-euler)
-  - [](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
+- [**📌 MỤC LỤC**](#-mục-lục)
+- [**I. PHẦN SỐ HỌC**](#i-phần-số-học)
+	- [**1. Kiểm tra số nguyên tố**](#1-kiểm-tra-số-nguyên-tố)
+	- [**2. Sàng nguyên tố Eratosthenes (Sieve of Eratosthenes)**](#2-sàng-nguyên-tố-eratosthenes-sieve-of-eratosthenes)
+- [**II. CHẶT NHỊ PHÂN**](#ii-chặt-nhị-phân)
+- [**III. QUY HOẠCH ĐỘNG - DYNAMIC PROGRAMMING (DP)**](#iii-quy-hoạch-động---dynamic-programming-dp)
+	- [**1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)**](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
+	- [**2. Vali B - Knapsack 01 (Balo 01)**](#2-vali-b---knapsack-01-balo-01)
+- [**IV. ĐỒ THỊ**](#iv-đồ-thị)
+	- [**1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)**](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
+	- [**2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)**](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
+	- [**3. Đếm số thành phần liên thông của đồ thị vô hướng**](#3-đếm-số-thành-phần-liên-thông-của-đồ-thị-vô-hướng)
+	- [**4. Tìm đường đi trên đồ thị không trọng số**](#4-tìm-đường-đi-trên-đồ-thị-không-trọng-số)
+	- [**5. Thuật toán loang (Flood Fill)**](#5-thuật-toán-loang-flood-fill)
+	- [**6. Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1 (01BFS)**](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
+	- [**7. Tìm đường đi ngắn nhất trên ma trận**](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
+	- [**8. Sắp xếp Topo - Thuật toán Kahn**](#8-sắp-xếp-topo---thuật-toán-kahn)
+	- [**9. Kiểm tra chu trình của đồ thị**](#9-kiểm-tra-chu-trình-của-đồ-thị)
+	- [**10. Thuật toán Kosaraju - Đếm số thành phần liên thông mạnh trên đồ thị có hướng**](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
+	- [**11. Disjoint Set Union - DSU**](#11-disjoint-set-union---dsu)
+	- [**12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
+	- [**13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#13-thuật-toán-prim-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
+	- [**14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)**](#14-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
+	- [**15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số**](#15-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số)
+	- [**16. Chu trình Euler và đường đi Euler**](#16-chu-trình-euler-và-đường-đi-euler)
+	- [**17. Chu trình Hamilton**](#17-chu-trình-hamilton)
 # **I. PHẦN SỐ HỌC**
 
 ### **1. Kiểm tra số nguyên tố**
@@ -359,28 +362,28 @@ Cài đặt:
 // Code
 ```
 
-### **12. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)**
+### **13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)**
 
 Cài đặt:
 ```cpp
 // Code
 ```
 
-### **13. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)**
+### **14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)**
 
 Cài đặt:
 ```cpp
 // Code
 ```
 
-### *14. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số
+### **15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số**
 
 Cài đặt:
 ```cpp
 // Code
 ```
 
-### **15. Chu trình Euler và đường đi Euler**
+### **16. Chu trình Euler và đường đi Euler**
 
 *a. Chu trình Euler*
 
@@ -390,6 +393,13 @@ Cài đặt:
 ```
 
 *b. Đường đi Euler*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **177. Chu trình Hamilton**
 
 Cài đặt:
 ```cpp
