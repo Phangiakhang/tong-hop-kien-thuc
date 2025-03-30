@@ -6,7 +6,6 @@
 Cách đơn giản nhất để kiểm tra tính nguyên tố của số tự nhiên là trực tiếp sử dụng định nghĩa số nguyên tố:
 > Số tự nhiên $n \geq 2$ là số nguyên tố khi và chỉ khi $n$ không chia hết cho các số tự nhiên $2, 3,..., n-1$.
 
-$$
-\int_{0}^{1} x^2 \,dx = \frac{1}{3}
-$$
-
+```math
+\int_0^1 x^2\,dx = \frac{1}{3}
+```
