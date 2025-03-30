@@ -32,6 +32,13 @@ title: "Tổng hợp kiến thức 📚"
   - [Tìm đường đi ngắn nhất trên ma trận](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
   - [Sắp xếp Topo - Thuật toán Kahn](#8-sắp-xếp-topo---thuật-toán-kahn)
   - [Kiểm tra chu trình của đồ thị](#9-kiểm-tra-chu-trình-của-đồ-thị)
+  - [](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
+  - [](#11-disjoint-set-union---dsu)
+  - [](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
+  - [](#13-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
+  - [](#14-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số)
+  - [](#15-chu-trình-euler-và-đường-đi-euler)
+  - [](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
 # **I. PHẦN SỐ HỌC**
 
 ### **1. Kiểm tra số nguyên tố**
@@ -330,6 +337,59 @@ Cài đặt:
 ```
 
 *b. Đồ thị có hướng*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **10. Thuật toán Kosaraju - Đếm số thành phần liên thông mạnh trên đồ thị có hướng**
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **11. Disjoint Set Union - DSU**
+
+### **12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)**
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **12. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)**
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **13. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)**
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### *14. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số
+
+Cài đặt:
+```cpp
+// Code
+```
+
+### **15. Chu trình Euler và đường đi Euler**
+
+*a. Chu trình Euler*
+
+Cài đặt:
+```cpp
+// Code
+```
+
+*b. Đường đi Euler*
 
 Cài đặt:
 ```cpp
