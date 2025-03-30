@@ -16,39 +16,50 @@ title: "Tổng hợp kiến thức 📚"
 
 # **📌 MỤC LỤC**
 
-- [**📌 MỤC LỤC**](#-mục-lục)
 - [**I. PHẦN SỐ HỌC**](#i-phần-số-học)
-	- [**1. Kiểm tra số nguyên tố**](#1-kiểm-tra-số-nguyên-tố)
-	- [**2. Sàng nguyên tố Eratosthenes (Sieve of Eratosthenes)**](#2-sàng-nguyên-tố-eratosthenes-sieve-of-eratosthenes)
-	- [**3. Phân tích thừa số nguyên tố**](#3-phân-tích-thừa-số-nguyên-tố)
-	- [**4. Phi hàm Euler**](#4-phi-hàm-euler)
-	- [**5. Nghịch đảo modulo**](#5-nghịch-đảo-modulo)
-	- [**6. Sàng nguyên tố $10^{12}$**](#6-sàng-nguyên-tố-1012)
-	- [**7. Thuật toán Rabin - Miller kiểm tra số nguyên tố**](#7-thuật-toán-rabin---miller-kiểm-tra-số-nguyên-tố)
-- [**II. Các kiểu dữ liệu trong Standard Template Library (STL)**](#ii-các-kiểu-dữ-liệu-trong-standard-template-library-stl)
-- [**III. Cấu trúc dữ liệu và giải thuật**](#iii-cấu-trúc-dữ-liệu-và-giải-thuật)
+	- [1. Kiểm tra số nguyên tố](#1-kiểm-tra-số-nguyên-tố)
+	- [2. Sàng nguyên tố Eratosthenes (Sieve of Eratosthenes)](#2-sàng-nguyên-tố-eratosthenes-sieve-of-eratosthenes)
+	- [3. Phân tích thừa số nguyên tố](#3-phân-tích-thừa-số-nguyên-tố)
+	- [4. Phi hàm Euler](#4-phi-hàm-euler)
+	- [5. Nghịch đảo modulo](#5-nghịch-đảo-modulo)
+	- [6. Sàng nguyên tố $10^{12}$](#6-sàng-nguyên-tố-1012)
+	- [7. Thuật toán Rabin - Miller kiểm tra số nguyên tố](#7-thuật-toán-rabin---miller-kiểm-tra-số-nguyên-tố)
+- [**II. STANDARD TEMPLATE LIBRARY (STL)**](#ii-standard-template-library-stl)
+	- [1. ITERATOR](#1-iterator)
+- [**III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**](#iii-cấu-trúc-dữ-liệu-và-giải-thuật)
+	- [1. Cây phân đoạn - Segment tree](#1-cây-phân-đoạn---segment-tree)
+	- [2. Cây chỉ số nhị phân - Fenwick tree](#2-cây-chỉ-số-nhị-phân---fenwick-tree)
+	- [3. Thuật toán tham lam](#3-thuật-toán-tham-lam)
+	- [4. Đệ quy - Vét cạn (Backtracking)](#4-đệ-quy---vét-cạn-backtracking)
+	- [5. Tổng tiền tố - Suffix Array](#5-tổng-tiền-tố---suffix-array)
+	- [6. Cửa sổ trượt - Sliding Window](#6-cửa-sổ-trượt---sliding-window)
+	- [7. Kỹ thuật 2 con trỏ - Two-pointer technique](#7-kỹ-thuật-2-con-trỏ---two-pointer-technique)
 - [**IV. CHẶT NHỊ PHÂN**](#iv-chặt-nhị-phân)
 - [**V. QUY HOẠCH ĐỘNG - DYNAMIC PROGRAMMING (DP)**](#v-quy-hoạch-động---dynamic-programming-dp)
-	- [**1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)**](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
-	- [**2. Vali B - Knapsack 01 (Balo 01)**](#2-vali-b---knapsack-01-balo-01)
+	- [1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
+	- [2. Vali B - Knapsack 01 (Balo 01)](#2-vali-b---knapsack-01-balo-01)
+	- [3. Bài toán biến đổi xâu](#3-bài-toán-biến-đổi-xâu)
+	- [4. Vali A - Knapsack](#4-vali-a---knapsack)
+	- [5. Nhân ma trận](#5-nhân-ma-trận)
 - [**VI. ĐỒ THỊ**](#vi-đồ-thị)
-	- [**1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)**](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
-	- [**2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)**](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
-	- [**3. Đếm số thành phần liên thông của đồ thị vô hướng**](#3-đếm-số-thành-phần-liên-thông-của-đồ-thị-vô-hướng)
-	- [**4. Tìm đường đi trên đồ thị không trọng số**](#4-tìm-đường-đi-trên-đồ-thị-không-trọng-số)
-	- [**5. Thuật toán loang (Flood Fill)**](#5-thuật-toán-loang-flood-fill)
-	- [**6. Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1 (01BFS)**](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
-	- [**7. Tìm đường đi ngắn nhất trên ma trận**](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
-	- [**8. Sắp xếp Topo - Thuật toán Kahn**](#8-sắp-xếp-topo---thuật-toán-kahn)
-	- [**9. Kiểm tra chu trình của đồ thị**](#9-kiểm-tra-chu-trình-của-đồ-thị)
-	- [**10. Thuật toán Kosaraju - Đếm số thành phần liên thông mạnh trên đồ thị có hướng**](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
-	- [**11. Disjoint Set Union - DSU**](#11-disjoint-set-union---dsu)
-	- [**12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
-	- [**13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#13-thuật-toán-prim-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
-	- [**14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)**](#14-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
-	- [**15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số**](#15-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số)
-	- [**16. Chu trình Euler và đường đi Euler**](#16-chu-trình-euler-và-đường-đi-euler)
-	- [**17. Chu trình Hamilton**](#17-chu-trình-hamilton)
+	- [1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
+	- [2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
+	- [3. Đếm số thành phần liên thông của đồ thị vô hướng](#3-đếm-số-thành-phần-liên-thông-của-đồ-thị-vô-hướng)
+	- [4. Tìm đường đi trên đồ thị không trọng số](#4-tìm-đường-đi-trên-đồ-thị-không-trọng-số)
+	- [5. Thuật toán loang (Flood Fill)](#5-thuật-toán-loang-flood-fill)
+	- [6. Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1 (01BFS)](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
+	- [7. Tìm đường đi ngắn nhất trên ma trận](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
+	- [8. Sắp xếp Topo - Thuật toán Kahn](#8-sắp-xếp-topo---thuật-toán-kahn)
+	- [9. Kiểm tra chu trình của đồ thị](#9-kiểm-tra-chu-trình-của-đồ-thị)
+	- [10. Thuật toán Kosaraju - Đếm số thành phần liên thông mạnh trên đồ thị có hướng](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
+	- [11. Disjoint Set Union - DSU](#11-disjoint-set-union---dsu)
+	- [12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
+	- [13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)](#13-thuật-toán-prim-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
+	- [14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)](#14-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
+	- [15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số](#15-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số)
+	- [16. Chu trình Euler và đường đi Euler](#16-chu-trình-euler-và-đường-đi-euler)
+	- [17. Chu trình Hamilton](#17-chu-trình-hamilton)
+
 
 # **I. PHẦN SỐ HỌC**
 
@@ -111,7 +122,7 @@ Do đó thuật toán này có thể không đủ nhanh để giải quyết gi�
 
 Khi cần tìm ra các số nguyên tố từ $1$ đến $n$, ta có thể duyệt từng số và kiểm tra tính nguyên tố của nó. Và ý tưởng đó cho ta một thuật toán $O(\sqrt{n})$.
 
-> Tuy nhiên, một nhà toán học cổ Hy Lạp tên là Eratosthenes đã "phát minh" ra một "thuật toán" hiệu quả hơn. Ban đầu, Eratosthenes đã lấy lá cọ và ghi tất cả các số từ $2$ cho đến $100$. Sau đó, ông đã chọc thủng các hợp số và giữ nguyên các số nguyên tố. Bảng số nguyên tố còn lại trông rất giống một cái sàng. Cho đến ngày nay, "thuật toán" này được phổ biến rộng rãi với cái tên **sàng nguyên tố Eratosthenes.**
+> Tuy nhiên, một nhà toán học cổ Hy Lạp tên là Eratosthenes đã "phát minh" ra một "thuật toán" hiệu quả hơn. Ban đầu, Eratosthenes đã lấy lá cọ và ghi tất cả các số từ 2 cho đến 100. Sau đó, ông đã chọc thủng các hợp số và giữ nguyên các số nguyên tố. Bảng số nguyên tố còn lại trông rất giống một cái sàng. Cho đến ngày nay, "thuật toán" này được phổ biến rộng rãi với cái tên **sàng nguyên tố Eratosthenes.**
 
 - Ban đầu, ta cho tất cả số từ $2$ đến $n$ vào sàng và đánh dấu tất cả các số. (Các số không được đánh dấu sau cùng sẽ bị loại khỏi sàng).
 - Duyệt lần lượt các số từ $2$ đến $n$. Nếu số đang xét:
@@ -172,9 +183,33 @@ Dưới đây là hình minh họa cho cải tiến trên. *Nguồn: [Wikipedia]
 
 ### **7. Thuật toán Rabin - Miller kiểm tra số nguyên tố**
 
-# **II. Các kiểu dữ liệu trong Standard Template Library (STL)**
+# **II. STANDARD TEMPLATE LIBRARY (STL)**
 
-# **III. Cấu trúc dữ liệu và giải thuật**
+Thư viện STL gồm 4 phần chính:
+- Iterators: con trỏ lặp
+- Containers: các cấu trúc dữ liệu lưu trữ
+- Algorithms: các thuật toán
+- Functions: các hàm
+  
+## **1. ITERATOR**
+
+
+
+# **III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**
+
+### **1. Cây phân đoạn - Segment tree**
+
+### **2. Cây chỉ số nhị phân - Fenwick tree**
+
+### **3. Thuật toán tham lam**
+
+### **4. Đệ quy - Vét cạn (Backtracking)**
+
+### **5. Tổng tiền tố - Suffix Array**
+
+### **6. Cửa sổ trượt - Sliding Window**
+
+### **7. Kỹ thuật 2 con trỏ - Two-pointer technique**
 
 # **IV. CHẶT NHỊ PHÂN**
 
@@ -232,6 +267,12 @@ while (n>0)
 }
 for (auto x:s) cout << w[x] << " " << v[x] << "\n";
 ```
+
+### **3. Bài toán biến đổi xâu**
+
+### **4. Vali A - Knapsack**
+
+### **5. Nhân ma trận**
 
 # **VI. ĐỒ THỊ**
 
