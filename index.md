@@ -248,7 +248,7 @@ Sau đây là các container thường dùng nhất.
 
 ### **2.8 Map (Ánh xạ)**
 
-## **3. ALGORITHMS (THUẬT TOÁN)
+## **3. ALGORITHMS (THUẬT TOÁN)**
 
 # **III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**
 
@@ -282,6 +282,10 @@ Tính nhanh tổng đoạn $[a_{i}, a_{i+1},\dots,a_{j}]$: $\boxed{p[j] - p[i-1]
 ### **7. Kỹ thuật 2 con trỏ - Two-pointer technique**
 
 # **IV. CHẶT NHỊ PHÂN**
+
+### **1. Một số hàm liên quan**
+
+### **2. Chặt nhị phân trên miền thực**
 
 # **V. QUY HOẠCH ĐỘNG - DYNAMIC PROGRAMMING (DP)**
 
