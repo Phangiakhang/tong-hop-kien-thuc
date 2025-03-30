@@ -230,6 +230,26 @@ Container có các cấu trúc thường sử dụng trong lập trình như: m�
 
 Nhiều container chưa một số hàm thành viên giống nhau. Quyết định sử dụng container nào cho nhu cầu cụ thể nói chung không chỉ phụ thuộc vào các hàm được cung cấp mà còn dựa vào độ hiệu quả của các hàm thành viên của nó (độ phức tạp của các hàm). Điều này đặc biệt đúng với container dãy (sequence containers), mà trong đó có sự khác nhau về độ phức tạp đối với các thao tác chèn/xóa phần tử hay truy cập phần tử.
 
+Sau đây là các container thường dùng nhất.
+
+### **2.1 Vector (Mảng động)**
+
+### **2.2 List (Danh sách liên kết)**
+
+### **2.3 Stack (Ngăn xếp)**
+
+### **2.4 Queue (Hàng đợi)**
+
+### **2.5 Priority queue (Hàng đợi ưu tiên)**
+
+### **2.6 Set (Tập hợp)**
+
+### **2.7 Multiset (Tập hợp trùng lặp)**
+
+### **2.8 Map (Ánh xạ)**
+
+## **3. ALGORITHMS (THUẬT TOÁN)
+
 # **III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**
 
 ### **1. Cây phân đoạn - Segment tree**
