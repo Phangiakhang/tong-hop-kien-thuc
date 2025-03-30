@@ -218,8 +218,7 @@ for (int i = 1 ; i <= n ; ++i)
 
 Một số ứng dụng:
 
-Tính nhanh tổng đoạn $[a_{i}, a_{i+1},\dots,a_{j}]$
-> s = p[j] - p[i-1];
+Tính nhanh tổng đoạn $[a_{i}, a_{i+1},\dots,a_{j}]$:&nbsp;&nbsp;$\boxed{p[j] - p[i-1]}$
 
 ### **6. Cửa sổ trượt - Sliding Window**
 
