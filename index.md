@@ -1,40 +1,13 @@
----
-title: "Tài liệu Tin học"
-author: "Tên của bạn"
-date: "2025-03-29"
----
+# **I. Phần số học**
 
-# 📌 Mục lục
-- [📌 Mục lục](#-mục-lục)
-- [Giới thiệu](#giới-thiệu)
-  - [Cấu trúc tài liệu](#cấu-trúc-tài-liệu)
-  - [Code C++](#code-c)
+## 1. Kiểm tra số nguyên tố
+*a. Thuật toán ngây thơ O(n)*
 
----
+Cách đơn giản nhất để kiểm tra tính nguyên tố của số tự nhiên là trực tiếp sử dụng định nghĩa số nguyên tố:
+> Số tự nhiên $n \geq 2$ là số nguyên tố khi và chỉ khi $n$ không chia hết cho các số tự nhiên $2, 3,..., n-1$.
 
-# Giới thiệu  
-Đây là tài liệu tin học 
 
-## Cấu trúc tài liệu  
-- **Hỗ trợ danh sách**  
-  - 🟢 Mục 1  
-  - 🔵 Mục 2  
-  - 🟠 Mục 3  
 
-- **Bảng dữ liệu**  
 
-| STT | Mục |  Nội dung  |
-|-----|-----|------------|
-|  1  |  🔥 | Nội dung A |
-|  2  |  ⚡ | Nội dung B |
 
-## Code C++  
-```cpp
-#include <iostream>
-using namespace std;
 
-int main() {
-    cout << "Hello, world!" << endl;
-    return 0;
-}
-```
