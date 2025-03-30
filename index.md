@@ -1,6 +1,6 @@
 <head>
   <title>Tổng hợp kiến thức 📚</title>
-  <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://raw.githubusercontent.com/Phangiakhang/tong-hop-kien-thuc/main/favicon.ico" type="image/x-icon">
   <!-- Các liên kết khác -->
 </head>
 
