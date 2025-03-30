@@ -16,16 +16,15 @@ title: "Tổng hợp kiến thức 📚"
 
 # **📌 MỤC LỤC**
 
-- [**I. PHẦN SỐ HỌC**](#i-phần-số-học)
-		- [**1. Kiểm tra số nguyên tố**](#1-kiểm-tra-số-nguyên-tố)
-		- [**2. Sàng nguyên tố Eratosthenes (Sieve of Eratosthenes)**](#2-sàng-nguyên-tố-eratosthenes-sieve-of-eratosthenes)
-- [**II. CHẶT NHỊ PHÂN**](#ii-chặt-nhị-phân)
-- [**III. QUY HOẠCH ĐỘNG - DYNAMIC PROGRAMMING (DP)**](#iii-quy-hoạch-động---dynamic-programming-dp)
-		- [**1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)**](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
-		- [**2. Vali B - Knapsack 01 (Balo 01)**](#2-vali-b---knapsack-01-balo-01)
-- [**IV. ĐỒ THỊ**](#iv-đồ-thị)
-		- [**1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)**](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
-		- [**2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)**](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
+- [PHẦN SỐ HỌC](#i-phần-số-học)
+  - [Kiểm tra số nguyên tố](#1-kiểm-tra-số-nguyên-tố)
+- [CHẶT NHỊ PHÂN](#ii-chặt-nhị-phân)
+- [QUY HOẠCH ĐỘNG](#iii-quy-hoạch-động---dynamic-programming-dp)
+  - [Dãy con tăng dài nhất](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
+  - [Knapsack 01](#2-vali-b---knapsack-01-balo-01)
+- [ĐỒ THỊ](#iv-đồ-thị)
+  - [DFS](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
+  - [BFS](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
 
 # **I. PHẦN SỐ HỌC**
 
