@@ -124,12 +124,15 @@ void sieve(int n)
 ```
 Dưới đây là hình minh họa cho cải tiến trên. *Nguồn: [Wikipedia](https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes)*
 
-![Sàng Eratosthenes](https://upload.wikimedia.org/wikipedia/commons/b/b8/Animation_Sieb_des_Eratosthenes_%28vi%29.gif){style="border: 2px solid black; padding: 5px;"}
+<div style="border: 2px solid black; display: inline-block; padding: 5px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Animation_Sieb_des_Eratosthenes_%28vi%29.gif">
+</div>
 
 # **II. CHẶT NHỊ PHÂN**
 
 # **III. QUY HOẠCH ĐỘNG**
 
-### **1. Dãy con tăng dài nhất **
+### **1. Dãy con tăng dài nhất - *Longest Increasing Subsequence (LIS)***
+
 
 # **IV. ĐỒ THỊ**
