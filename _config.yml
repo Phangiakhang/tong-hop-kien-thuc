@@ -1,5 +1,5 @@
 theme: jekyll-theme-midnight
-title: "CNIT 📚"
+title: "Tổng hợp kiến thức 📚"
 markdown: kramdown
 kramdown:
   math_engine: mathjax
