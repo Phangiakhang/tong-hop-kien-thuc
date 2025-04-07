@@ -5,71 +5,71 @@ title: "Tổng hợp kiến thức 📚"
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"
-	onload="renderMathInElement(document.body, {
-		delimiters: [
-			{left: '$$', right: '$$', display: true},
-			{left: '$', right: '$', display: false}
-		],
-		ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-	});">
+    onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+        ],
+        ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    });">
 </script>
 
 # **📌 MỤC LỤC**
 - [**I. PHẦN SỐ HỌC**](#i-phần-số-học)
-	- [**1. Kiểm tra số nguyên tố**](#1-kiểm-tra-số-nguyên-tố)
-	- [**2. Sàng nguyên tố Eratosthenes (Sieve of Eratosthenes)**](#2-sàng-nguyên-tố-eratosthenes-sieve-of-eratosthenes)
-	- [**3. Phân tích thừa số nguyên tố**](#3-phân-tích-thừa-số-nguyên-tố)
-	- [**4. Phi hàm Euler**](#4-phi-hàm-euler)
-	- [**5. Nghịch đảo modulo**](#5-nghịch-đảo-modulo)
-	- [**6. Sàng nguyên tố $10^{12}$**](#6-sàng-nguyên-tố-1012)
+    - [**1. Kiểm tra số nguyên tố**](#1-kiểm-tra-số-nguyên-tố)
+    - [**2. Sàng nguyên tố Eratosthenes (Sieve of Eratosthenes)**](#2-sàng-nguyên-tố-eratosthenes-sieve-of-eratosthenes)
+    - [**3. Phân tích thừa số nguyên tố**](#3-phân-tích-thừa-số-nguyên-tố)
+    - [**4. Phi hàm Euler**](#4-phi-hàm-euler)
+    - [**5. Nghịch đảo modulo**](#5-nghịch-đảo-modulo)
+    - [**6. Sàng nguyên tố $10^{12}$**](#6-sàng-nguyên-tố-1012)
     - [**7. Thuật toán Rabin - Miller kiểm tra số nguyên tố**](#7-thuật-toán-rabin---miller-kiểm-tra-số-nguyên-tố)
 - [**II. STANDARD TEMPLATE LIBRARY (STL)**](#ii-standard-template-library-stl)
-	- [**1. ITERATOR**](#1-iterator)
-	- [**2. CONTAINER**](#2-container)
-		- [**2.1 Vector (Mảng động)**](#21-vector-mảng-động)
-		- [**2.2 List (Danh sách liên kết)**](#22-list-danh-sách-liên-kết)
-		- [**2.3 Stack (Ngăn xếp)**](#23-stack-ngăn-xếp)
-		- [**2.4 Queue (Hàng đợi)**](#24-queue-hàng-đợi)
-		- [**2.5 Priority queue (Hàng đợi ưu tiên)**](#25-priority-queue-hàng-đợi-ưu-tiên)
-		- [**2.6 Set (Tập hợp)**](#26-set-tập-hợp)
-		- [**2.7 Multiset (Tập hợp trùng lặp)**](#27-multiset-tập-hợp-trùng-lặp)
-		- [**2.8 Map (Ánh xạ)**](#28-map-ánh-xạ)
-	- [**3. ALGORITHMS (THUẬT TOÁN)**](#3-algorithms-thuật-toán)
+    - [**1. ITERATOR**](#1-iterator)
+    - [**2. CONTAINER**](#2-container)
+        - [**2.1 Vector (Mảng động)**](#21-vector-mảng-động)
+        - [**2.2 List (Danh sách liên kết)**](#22-list-danh-sách-liên-kết)
+        - [**2.3 Stack (Ngăn xếp)**](#23-stack-ngăn-xếp)
+        - [**2.4 Queue (Hàng đợi)**](#24-queue-hàng-đợi)
+        - [**2.5 Priority queue (Hàng đợi ưu tiên)**](#25-priority-queue-hàng-đợi-ưu-tiên)
+        - [**2.6 Set (Tập hợp)**](#26-set-tập-hợp)
+        - [**2.7 Multiset (Tập hợp trùng lặp)**](#27-multiset-tập-hợp-trùng-lặp)
+        - [**2.8 Map (Ánh xạ)**](#28-map-ánh-xạ)
+    - [**3. ALGORITHMS (THUẬT TOÁN)**](#3-algorithms-thuật-toán)
 - [**III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**](#iii-cấu-trúc-dữ-liệu-và-giải-thuật)
-	- [**1. Cây phân đoạn - Segment tree**](#1-cây-phân-đoạn---segment-tree)
-	- [**2. Cây chỉ số nhị phân - Fenwick tree**](#2-cây-chỉ-số-nhị-phân---fenwick-tree)
-	- [**3. Thuật toán tham lam**](#3-thuật-toán-tham-lam)
-	- [**4. Đệ quy - Vét cạn (Backtracking)**](#4-đệ-quy---vét-cạn-backtracking)
-	- [**5. Tổng tiền tố - Suffix Array**](#5-tổng-tiền-tố---suffix-array)
-	- [**6. Cửa sổ trượt - Sliding Window**](#6-cửa-sổ-trượt---sliding-window)
-	- [**7. Kỹ thuật 2 con trỏ - Two-pointer technique**](#7-kỹ-thuật-2-con-trỏ---two-pointer-technique)
+    - [**1. Cây phân đoạn - Segment tree**](#1-cây-phân-đoạn---segment-tree)
+    - [**2. Cây chỉ số nhị phân - Fenwick tree**](#2-cây-chỉ-số-nhị-phân---fenwick-tree)
+    - [**3. Thuật toán tham lam**](#3-thuật-toán-tham-lam)
+    - [**4. Đệ quy - Vét cạn (Backtracking)**](#4-đệ-quy---vét-cạn-backtracking)
+    - [**5. Tổng tiền tố - Suffix Array**](#5-tổng-tiền-tố---suffix-array)
+    - [**6. Cửa sổ trượt - Sliding Window**](#6-cửa-sổ-trượt---sliding-window)
+    - [**7. Kỹ thuật 2 con trỏ - Two-pointer technique**](#7-kỹ-thuật-2-con-trỏ---two-pointer-technique)
 - [**IV. CHẶT NHỊ PHÂN**](#iv-chặt-nhị-phân)
-	- [**1. Một số hàm liên quan**](#1-một-số-hàm-liên-quan)
-	- [**2. Chặt nhị phân trên miền thực**](#2-chặt-nhị-phân-trên-miền-thực)
+    - [**1. Một số hàm liên quan**](#1-một-số-hàm-liên-quan)
+    - [**2. Chặt nhị phân trên miền thực**](#2-chặt-nhị-phân-trên-miền-thực)
 - [**V. QUY HOẠCH ĐỘNG - DYNAMIC PROGRAMMING (DP)**](#v-quy-hoạch-động---dynamic-programming-dp)
-	- [**1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)**](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
-	- [**2. Vali B - Knapsack 01 (Balo 01)**](#2-vali-b---knapsack-01-balo-01)
-	- [**3. Bài toán biến đổi xâu**](#3-bài-toán-biến-đổi-xâu)
-	- [**4. Vali A - Knapsack**](#4-vali-a---knapsack)
-	- [**5. Nhân ma trận**](#5-nhân-ma-trận)
+    - [**1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)**](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
+    - [**2. Vali B - Knapsack 01 (Balo 01)**](#2-vali-b---knapsack-01-balo-01)
+    - [**3. Bài toán biến đổi xâu**](#3-bài-toán-biến-đổi-xâu)
+    - [**4. Vali A - Knapsack**](#4-vali-a---knapsack)
+    - [**5. Nhân ma trận**](#5-nhân-ma-trận)
 - [**VI. ĐỒ THỊ**](#vi-đồ-thị)
-	- [**1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)**](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
-	- [**2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)**](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
-	- [**3. Đếm số thành phần liên thông của đồ thị vô hướng**](#3-đếm-số-thành-phần-liên-thông-của-đồ-thị-vô-hướng)
-	- [**4. Tìm đường đi trên đồ thị không trọng số**](#4-tìm-đường-đi-trên-đồ-thị-không-trọng-số)
-	- [**5. Thuật toán loang (Flood Fill)**](#5-thuật-toán-loang-flood-fill)
-	- [**6. Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1 (01BFS)**](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
-	- [**7. Tìm đường đi ngắn nhất trên ma trận**](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
-	- [**8. Sắp xếp Topo - Thuật toán Kahn**](#8-sắp-xếp-topo---thuật-toán-kahn)
-	- [**9. Kiểm tra chu trình của đồ thị**](#9-kiểm-tra-chu-trình-của-đồ-thị)
-	- [**10. Thuật toán Kosaraju - Đếm số thành phần liên thông mạnh trên đồ thị có hướng**](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
-	- [**11. Disjoint Set Union - DSU**](#11-disjoint-set-union---dsu)
-	- [**12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
-	- [**13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#13-thuật-toán-prim-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
-	- [**14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)**](#14-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
-	- [**15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số không âm**](#15-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-không-âm)
-	- [**16. Chu trình Euler và đường đi Euler**](#16-chu-trình-euler-và-đường-đi-euler)
-	- [**17. Chu trình Hamilton**](#17-chu-trình-hamilton)
+    - [**1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)**](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
+    - [**2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)**](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
+    - [**3. Đếm số thành phần liên thông của đồ thị vô hướng**](#3-đếm-số-thành-phần-liên-thông-của-đồ-thị-vô-hướng)
+    - [**4. Tìm đường đi trên đồ thị không trọng số**](#4-tìm-đường-đi-trên-đồ-thị-không-trọng-số)
+    - [**5. Thuật toán loang (Flood Fill)**](#5-thuật-toán-loang-flood-fill)
+    - [**6. Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1 (01BFS)**](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
+    - [**7. Tìm đường đi ngắn nhất trên ma trận**](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
+    - [**8. Sắp xếp Topo - Thuật toán Kahn**](#8-sắp-xếp-topo---thuật-toán-kahn)
+    - [**9. Kiểm tra chu trình của đồ thị**](#9-kiểm-tra-chu-trình-của-đồ-thị)
+    - [**10. Thuật toán Kosaraju - Đếm số thành phần liên thông mạnh trên đồ thị có hướng**](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
+    - [**11. Disjoint Set Union - DSU**](#11-disjoint-set-union---dsu)
+    - [**12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
+    - [**13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#13-thuật-toán-prim-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
+    - [**14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)**](#14-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
+    - [**15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số không âm**](#15-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-không-âm)
+    - [**16. Chu trình Euler và đường đi Euler**](#16-chu-trình-euler-và-đường-đi-euler)
+    - [**17. Chu trình Hamilton**](#17-chu-trình-hamilton)
 
 
 # **I. PHẦN SỐ HỌC**
@@ -85,11 +85,11 @@ Cài đặt:
 ```cpp
 bool prime(int n)
 {
-	if (n < 2) return false;
-	for (int i = 2; i < n; ++i)
-		if (n % i == 0)
-			return false;
-	return true;
+    if (n < 2) return false;
+    for (int i = 2; i < n; ++i)
+        if (n % i == 0)
+            return false;
+    return true;
 }
 ```
 *b. Thuật toán tối ưu $O(\sqrt{n})$*
@@ -100,11 +100,11 @@ Cài đặt:
 ```cpp
 bool prime(int n)
 {
-	if (n < 2) return false;
-	for (int i = 2; i*i <= n; ++i)
-		if (n % i == 0)
-			return false;
-	return true;
+    if (n < 2) return false;
+    for (int i = 2; i*i <= n; ++i)
+        if (n % i == 0)
+            return false;
+    return true;
 }
 ```
 *c. Thuật toán nâng cao*
@@ -115,14 +115,14 @@ Cài đặt:
 ```cpp
 bool prime(int n)
 {
-	if (n == 2 || n == 3)
-		return true;
-	if (n < 3 || n % 2 == 0 || n % 3 == 0)
-		return false;
-	for (int i = 5; i * i <= n; i += 6)
-		if (n % i == 0 || n % (i + 2) == 0)
-			return false;
-	return true;
+    if (n == 2 || n == 3)
+        return true;
+    if (n < 3 || n % 2 == 0 || n % 3 == 0)
+        return false;
+    for (int i = 5; i * i <= n; i += 6)
+        if (n % i == 0 || n % (i + 2) == 0)
+            return false;
+    return true;
 }
 ```
 **Chú ý:** Có thể sử dụng nhiều số nguyên tố đầu tiên để tối ưu thuật toán hơn. Về lý thuyết, nếu $k$ là số số nguyên tố được dùng càng lớn thì vòng lặp chạy càng nhanh. Tuy nhiên, với $k = 50$, độ phức tạp vòng lặp ***for***  là $O(\dfrac {\sqrt{n}}{10})$. Và kể cả với $k = 6 \cdot 10^5$ thì độ phức tạp thuật của vòng lặp ***for***  vẫn là $O(\dfrac {\sqrt{n}}{30})$.
@@ -137,8 +137,8 @@ Khi cần tìm ra các số nguyên tố từ $1$ đến $n$, ta có thể duy�
 
 - Ban đầu, ta cho tất cả số từ $2$ đến $n$ vào sàng và đánh dấu tất cả các số. (Các số không được đánh dấu sau cùng sẽ bị loại khỏi sàng).
 - Duyệt lần lượt các số từ $2$ đến $n$. Nếu số đang xét:
-	- Đã được đánh dấu $\Rightarrow$ số nguyên tố: ta bỏ đánh dấu tất cả các bội (khác chính nó) của số nguyên tố này để loại các bội ấy ra khỏi sàng.
-	- Không được đánh dấu $\Rightarrow$ hợp số: ta bỏ qua số này.
+    - Đã được đánh dấu $\Rightarrow$ số nguyên tố: ta bỏ đánh dấu tất cả các bội (khác chính nó) của số nguyên tố này để loại các bội ấy ra khỏi sàng.
+    - Không được đánh dấu $\Rightarrow$ hợp số: ta bỏ qua số này.
 - Sau khi duyệt xong các số còn lại trong sàng, hay nói cách khác các số được đánh dấu là số nguyên tố.
 
 Cài đặt:
@@ -147,13 +147,13 @@ const int maxn = 1e6 + 7;
 vector <bool> prime(maxn, true);
 void sieve(int n)
 {
-	prime[0] = prime[1] = false;
-	for (int i = 2 ; i <= n ; ++i) {
-		if (prime[i]) {
-			for (int j = i*2 ; j <= n ; j += i)
-				prime[j] = false;
-		}
-	}
+    prime[0] = prime[1] = false;
+    for (int i = 2 ; i <= n ; ++i) {
+        if (prime[i]) {
+            for (int j = i*2 ; j <= n ; j += i)
+                prime[j] = false;
+        }
+    }
 }
 ```
 **Độ phức tạp thời gian: $O(n \log(\log n))$**
@@ -171,13 +171,13 @@ const int maxn = 1e6 + 7;
 vector <bool> prime(maxn, true);
 void sieve(int n)
 {
-	prime[0] = prime[1] = false;
-	for (int i = 2 ; i * i <= n ; ++i) {
-		if (prime[i]) {
-			for (int j = i*i ; j <= n ; j += i)
-				prime[j] = false;
-		}
-	}
+    prime[0] = prime[1] = false;
+    for (int i = 2 ; i * i <= n ; ++i) {
+        if (prime[i]) {
+            for (int j = i*i ; j <= n ; j += i)
+                prime[j] = false;
+        }
+    }
 }
 ```
 Dưới đây là hình minh họa cho cải tiến trên. *Nguồn: [Wikipedia](https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes)*
@@ -225,7 +225,7 @@ it = <tên_container>.begin();
 it = <tên_container>.end();
 // Duyệt qua container
 for (it = <tên_container>.begin() ; it != <tên_container>.end() ; ++it) {
-	// Code
+    // Code
 }
 ```
 Tất cả các hàm iterator này đều có độ phức tạp là $O(1)$.
@@ -279,7 +279,7 @@ Cài đặt tiền xử lí:
 ```cpp
 vector <int> p(n+1);
 for (int i = 1 ; i <= n ; ++i)
-	p[i] = p[i-1]+a[i];
+    p[i] = p[i-1]+a[i];
 ```
 
 Một số ứng dụng:
@@ -308,8 +308,8 @@ Cài đặt:
 ```cpp
 vector <int> dp(n+1, 1);
 for (int i = 1 ; i <= n ; ++i) {
-	for (int j = 1 ; j < i ; ++j)
-		dp[i] = max(dp[i], dp[i-1] + 1);
+    for (int j = 1 ; j < i ; ++j)
+        dp[i] = max(dp[i], dp[i-1] + 1);
 }
 ```
 
@@ -328,11 +328,11 @@ Cài đặt:
 ```cpp
 vector <vector<int>> dp(n+1, vector<int>(S+1, 0))
 for (int i = 1 ; i <= n ; ++i) {
-	for (int j = 1 ; j <= S ; ++j) {
-		dp[i][j] = dp[i-1][j];
-		if (j >= w[i])
-			dp[i][j] = max(dp[i][j], dp[i-1][j-w[i]] + v[i]);
-		}
+    for (int j = 1 ; j <= S ; ++j) {
+        dp[i][j] = dp[i-1][j];
+        if (j >= w[i])
+            dp[i][j] = max(dp[i][j], dp[i-1][j-w[i]] + v[i]);
+        }
 }
 cout << dp[n][S] << "\n";
 ```
@@ -344,11 +344,11 @@ Cài đặt:
 set <int> s;
 while (n>0)
 {
-		if (dp[n][S]-dp[n-1][S] != 0) {
-				s.insert(n);
-				S -= w[n];
-		}
-		n--;    
+        if (dp[n][S]-dp[n-1][S] != 0) {
+                s.insert(n);
+                S -= w[n];
+        }
+        n--;    
 }
 for (auto x:s) cout << w[x] << " " << v[x] << "\n";
 ```
@@ -377,12 +377,12 @@ Cài đặt:
 vector <bool> vis(maxn, false);
 void dfs(int u)
 {
-	cout << u << " ";
-	vis[u] = true;
-	for (auto v : adj[u]) {
-		if (!vis[v]) 
-			dfs(v);
-	}
+    cout << u << " ";
+    vis[u] = true;
+    for (auto v : adj[u]) {
+        if (!vis[v]) 
+            dfs(v);
+    }
 }
 ```
 
@@ -393,7 +393,7 @@ void dfs(int u)
 Thuật toán tìm kiếm theo chiều rộng (thường gọi là BFS) là một thuật toán duyệt bắt đầu từ gốc, sau đó lần lượt xét qua các đỉnh của một cây theo ưu tiên về độ sâu từ nhỏ đến lớn.
 > Ở đây có một khái niệm mới là “độ sâu”. Độ sâu của một đỉnh được định nghĩa là số cạnh trên đường đi từ đỉnh đang xét đến đỉnh gốc.
 
-Hình ảnh minh họa: *Nguồn: [howkteam.vn](https://f.howkteam.vn/Upload/cke/images/2_IMAGE%20TUTORIAL/8_CTDL%26GT/Bai19/1_BFS%20v%C3%A0%20DFS_Howkteam_vn.png)*
+Hình ảnh minh họa. *Nguồn: [howkteam.vn](https://f.howkteam.vn/Upload/cke/images/2_IMAGE%20TUTORIAL/8_CTDL%26GT/Bai19/1_BFS%20v%C3%A0%20DFS_Howkteam_vn.png)*
 
 ![Độ sâu của đỉnh](https://f.howkteam.vn/Upload/cke/images/2_IMAGE%20TUTORIAL/8_CTDL%26GT/Bai19/1_BFS%20v%C3%A0%20DFS_Howkteam_vn.png)
 
@@ -413,21 +413,21 @@ Cài đặt:
 vector <bool> vis(maxn, false);
 void bfs(int s)
 {
-	queue <int> q;
-	q.push(s);
-	vis[s] = true;
+    queue <int> q;
+    q.push(s);
+    vis[s] = true;
 
-	while (!q.empty()) {
-		int u = q.front();
-		q.pop()
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop()
 
-		for (auto v : adj[u]) {
-			if (!vis[v]) {
-				q.push(v);
-				vis[v];
-			}
-		}
-	}
+        for (auto v : adj[u]) {
+            if (!vis[v]) {
+                q.push(v);
+                vis[v];
+            }
+        }
+    }
 }
 ``` 
 
@@ -445,10 +445,10 @@ Cài đặt:
 ```cpp
 int cnt = 0;
 for (int i = 1 ; i <= n ; ++i) {
-	if (!vis[i]) {
-		bfs(i); // hoặc dfs(i)
-		++cnt;
-	}
+    if (!vis[i]) {
+        bfs(i); // hoặc dfs(i)
+        ++cnt;
+    }
 }
 cout << cnt << "\n";
 ```
