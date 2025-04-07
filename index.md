@@ -22,7 +22,7 @@ title: "Tổng hợp kiến thức 📚"
 	- [**4. Phi hàm Euler**](#4-phi-hàm-euler)
 	- [**5. Nghịch đảo modulo**](#5-nghịch-đảo-modulo)
 	- [**6. Sàng nguyên tố $10^{12}$**](#6-sàng-nguyên-tố-1012)
-	- [**7. Thuật toán Rabin - Miller kiểm tra số nguyên tố**](#7-thuật-toán-rabin---miller-kiểm-tra-số-nguyên-tố)
+    - [**7. Thuật toán Rabin - Miller kiểm tra số nguyên tố**](#7-thuật-toán-rabin---miller-kiểm-tra-số-nguyên-tố)
 - [**II. STANDARD TEMPLATE LIBRARY (STL)**](#ii-standard-template-library-stl)
 	- [**1. ITERATOR**](#1-iterator)
 	- [**2. CONTAINER**](#2-container)
