@@ -15,50 +15,61 @@ title: "Tổng hợp kiến thức 📚"
 </script>
 
 # **📌 MỤC LỤC**
-
 - [**I. PHẦN SỐ HỌC**](#i-phần-số-học)
-	- [1. Kiểm tra số nguyên tố](#1-kiểm-tra-số-nguyên-tố)
-	- [2. Sàng nguyên tố Eratosthenes (Sieve of Eratosthenes)](#2-sàng-nguyên-tố-eratosthenes-sieve-of-eratosthenes)
-	- [3. Phân tích thừa số nguyên tố](#3-phân-tích-thừa-số-nguyên-tố)
-	- [4. Phi hàm Euler](#4-phi-hàm-euler)
-	- [5. Nghịch đảo modulo](#5-nghịch-đảo-modulo)
-	- [6. Sàng nguyên tố $10^{12}$](#6-sàng-nguyên-tố-1012)
-	- [7. Thuật toán Rabin - Miller kiểm tra số nguyên tố](#7-thuật-toán-rabin---miller-kiểm-tra-số-nguyên-tố)
+	- [**1. Kiểm tra số nguyên tố**](#1-kiểm-tra-số-nguyên-tố)
+	- [**2. Sàng nguyên tố Eratosthenes (Sieve of Eratosthenes)**](#2-sàng-nguyên-tố-eratosthenes-sieve-of-eratosthenes)
+	- [**3. Phân tích thừa số nguyên tố**](#3-phân-tích-thừa-số-nguyên-tố)
+	- [**4. Phi hàm Euler**](#4-phi-hàm-euler)
+	- [**5. Nghịch đảo modulo**](#5-nghịch-đảo-modulo)
+	- [**6. Sàng nguyên tố $10^{12}$**](#6-sàng-nguyên-tố-1012)
+	- [**7. Thuật toán Rabin - Miller kiểm tra số nguyên tố**](#7-thuật-toán-rabin---miller-kiểm-tra-số-nguyên-tố)
 - [**II. STANDARD TEMPLATE LIBRARY (STL)**](#ii-standard-template-library-stl)
-	- [1. ITERATOR](#1-iterator)
+	- [**1. ITERATOR**](#1-iterator)
+	- [**2. CONTAINER**](#2-container)
+		- [**2.1 Vector (Mảng động)**](#21-vector-mảng-động)
+		- [**2.2 List (Danh sách liên kết)**](#22-list-danh-sách-liên-kết)
+		- [**2.3 Stack (Ngăn xếp)**](#23-stack-ngăn-xếp)
+		- [**2.4 Queue (Hàng đợi)**](#24-queue-hàng-đợi)
+		- [**2.5 Priority queue (Hàng đợi ưu tiên)**](#25-priority-queue-hàng-đợi-ưu-tiên)
+		- [**2.6 Set (Tập hợp)**](#26-set-tập-hợp)
+		- [**2.7 Multiset (Tập hợp trùng lặp)**](#27-multiset-tập-hợp-trùng-lặp)
+		- [**2.8 Map (Ánh xạ)**](#28-map-ánh-xạ)
+	- [**3. ALGORITHMS (THUẬT TOÁN)**](#3-algorithms-thuật-toán)
 - [**III. CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT**](#iii-cấu-trúc-dữ-liệu-và-giải-thuật)
-	- [1. Cây phân đoạn - Segment tree](#1-cây-phân-đoạn---segment-tree)
-	- [2. Cây chỉ số nhị phân - Fenwick tree](#2-cây-chỉ-số-nhị-phân---fenwick-tree)
-	- [3. Thuật toán tham lam](#3-thuật-toán-tham-lam)
-	- [4. Đệ quy - Vét cạn (Backtracking)](#4-đệ-quy---vét-cạn-backtracking)
-	- [5. Tổng tiền tố - Suffix Array](#5-tổng-tiền-tố---suffix-array)
-	- [6. Cửa sổ trượt - Sliding Window](#6-cửa-sổ-trượt---sliding-window)
-	- [7. Kỹ thuật 2 con trỏ - Two-pointer technique](#7-kỹ-thuật-2-con-trỏ---two-pointer-technique)
+	- [**1. Cây phân đoạn - Segment tree**](#1-cây-phân-đoạn---segment-tree)
+	- [**2. Cây chỉ số nhị phân - Fenwick tree**](#2-cây-chỉ-số-nhị-phân---fenwick-tree)
+	- [**3. Thuật toán tham lam**](#3-thuật-toán-tham-lam)
+	- [**4. Đệ quy - Vét cạn (Backtracking)**](#4-đệ-quy---vét-cạn-backtracking)
+	- [**5. Tổng tiền tố - Suffix Array**](#5-tổng-tiền-tố---suffix-array)
+	- [**6. Cửa sổ trượt - Sliding Window**](#6-cửa-sổ-trượt---sliding-window)
+	- [**7. Kỹ thuật 2 con trỏ - Two-pointer technique**](#7-kỹ-thuật-2-con-trỏ---two-pointer-technique)
 - [**IV. CHẶT NHỊ PHÂN**](#iv-chặt-nhị-phân)
+	- [**1. Một số hàm liên quan**](#1-một-số-hàm-liên-quan)
+	- [**2. Chặt nhị phân trên miền thực**](#2-chặt-nhị-phân-trên-miền-thực)
 - [**V. QUY HOẠCH ĐỘNG - DYNAMIC PROGRAMMING (DP)**](#v-quy-hoạch-động---dynamic-programming-dp)
-	- [1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
-	- [2. Vali B - Knapsack 01 (Balo 01)](#2-vali-b---knapsack-01-balo-01)
-	- [3. Bài toán biến đổi xâu](#3-bài-toán-biến-đổi-xâu)
-	- [4. Vali A - Knapsack](#4-vali-a---knapsack)
-	- [5. Nhân ma trận](#5-nhân-ma-trận)
+	- [**1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)**](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
+	- [**2. Vali B - Knapsack 01 (Balo 01)**](#2-vali-b---knapsack-01-balo-01)
+	- [**3. Bài toán biến đổi xâu**](#3-bài-toán-biến-đổi-xâu)
+	- [**4. Vali A - Knapsack**](#4-vali-a---knapsack)
+	- [**5. Nhân ma trận**](#5-nhân-ma-trận)
 - [**VI. ĐỒ THỊ**](#vi-đồ-thị)
-	- [1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
-	- [2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
-	- [3. Đếm số thành phần liên thông của đồ thị vô hướng](#3-đếm-số-thành-phần-liên-thông-của-đồ-thị-vô-hướng)
-	- [4. Tìm đường đi trên đồ thị không trọng số](#4-tìm-đường-đi-trên-đồ-thị-không-trọng-số)
-	- [5. Thuật toán loang (Flood Fill)](#5-thuật-toán-loang-flood-fill)
-	- [6. Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1 (01BFS)](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
-	- [7. Tìm đường đi ngắn nhất trên ma trận](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
-	- [8. Sắp xếp Topo - Thuật toán Kahn](#8-sắp-xếp-topo---thuật-toán-kahn)
-	- [9. Kiểm tra chu trình của đồ thị](#9-kiểm-tra-chu-trình-của-đồ-thị)
-	- [10. Thuật toán Kosaraju - Đếm số thành phần liên thông mạnh trên đồ thị có hướng](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
-	- [11. Disjoint Set Union - DSU](#11-disjoint-set-union---dsu)
-	- [12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
-	- [13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)](#13-thuật-toán-prim-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
-	- [14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)](#14-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
-	- [15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số không âm](#15-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-không-âm)
-	- [16. Chu trình Euler và đường đi Euler](#16-chu-trình-euler-và-đường-đi-euler)
-	- [17. Chu trình Hamilton](#17-chu-trình-hamilton)
+	- [**1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)**](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
+	- [**2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)**](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
+	- [**3. Đếm số thành phần liên thông của đồ thị vô hướng**](#3-đếm-số-thành-phần-liên-thông-của-đồ-thị-vô-hướng)
+	- [**4. Tìm đường đi trên đồ thị không trọng số**](#4-tìm-đường-đi-trên-đồ-thị-không-trọng-số)
+	- [**5. Thuật toán loang (Flood Fill)**](#5-thuật-toán-loang-flood-fill)
+	- [**6. Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1 (01BFS)**](#6-tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-0-hoặc-1-01bfs)
+	- [**7. Tìm đường đi ngắn nhất trên ma trận**](#7-tìm-đường-đi-ngắn-nhất-trên-ma-trận)
+	- [**8. Sắp xếp Topo - Thuật toán Kahn**](#8-sắp-xếp-topo---thuật-toán-kahn)
+	- [**9. Kiểm tra chu trình của đồ thị**](#9-kiểm-tra-chu-trình-của-đồ-thị)
+	- [**10. Thuật toán Kosaraju - Đếm số thành phần liên thông mạnh trên đồ thị có hướng**](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
+	- [**11. Disjoint Set Union - DSU**](#11-disjoint-set-union---dsu)
+	- [**12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
+	- [**13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)**](#13-thuật-toán-prim-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
+	- [**14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)**](#14-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
+	- [**15. Thuật toán Dijkstra - Tìm đường đi ngắn nhất trên đồ thị có trọng số không âm**](#15-thuật-toán-dijkstra---tìm-đường-đi-ngắn-nhất-trên-đồ-thị-có-trọng-số-không-âm)
+	- [**16. Chu trình Euler và đường đi Euler**](#16-chu-trình-euler-và-đường-đi-euler)
+	- [**17. Chu trình Hamilton**](#17-chu-trình-hamilton)
 
 
 # **I. PHẦN SỐ HỌC**
@@ -352,6 +363,15 @@ for (auto x:s) cout << w[x] << " " << v[x] << "\n";
 
 ### **1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)**
 
+Thuật toán tìm kiếm theo chiều sâu (thường gọi là DFS) là một thuật toán duyệt khởi đầu tại đỉnh gốc và đi xa nhất có thể theo một nhánh. Tiến trình thực hiện dfs có thể thực hiện như sau:
+- Xuất phát từ đỉnh gốc
+- Đánh dấu đỉnh đang xét hiện tại
+- Chọn một đỉnh kề với đỉnh đang xét mà chưa bị đánh dấu. Tiếp tục xét đỉnh kề đó
+- Nếu như không có đỉnh kề thoả mãn, quay trở lại xét đỉnh trước khi xét đỉnh hiện tại
+- Quá trình kết thúc khi không còn đỉnh để xét
+
+Để cài đặt thuật toán dfs, thông thường người ta sẽ sử dụng thuật đệ quy.
+
 Cài đặt:
 ```cpp
 vector <bool> vis(maxn, false);
@@ -365,7 +385,28 @@ void dfs(int u)
 	}
 }
 ```
+
+**Độ phức tạp thời gian của thuật toán là $O(n + m)$ với n là số đỉnh và m là số cạnh**
+
 ### **2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)**
+
+Thuật toán tìm kiếm theo chiều rộng (thường gọi là BFS) là một thuật toán duyệt bắt đầu từ gốc, sau đó lần lượt xét qua các đỉnh của một cây theo ưu tiên về độ sâu từ nhỏ đến lớn.
+> Ở đây có một khái niệm mới là “độ sâu”. Độ sâu của một đỉnh được định nghĩa là số cạnh trên đường đi từ đỉnh đang xét đến đỉnh gốc.
+
+Hình ảnh minh họa: *Nguồn: [howkteam.vn](https://f.howkteam.vn/Upload/cke/images/2_IMAGE%20TUTORIAL/8_CTDL%26GT/Bai19/1_BFS%20v%C3%A0%20DFS_Howkteam_vn.png)*
+
+![Độ sâu của đỉnh](https://f.howkteam.vn/Upload/cke/images/2_IMAGE%20TUTORIAL/8_CTDL%26GT/Bai19/1_BFS%20v%C3%A0%20DFS_Howkteam_vn.png)
+
+Trước hết, chúng ta sẽ cần tìm cách để thể hiện một cạnh của cây. Cách được dùng phổ biến nhất là dùng danh sách kề, tức là mỗi node sẽ có một danh sách lưu lại tất cả các node kề (node có cạnh trực tiếp) với node đó. Trong C++, các bạn có thể dùng vector để lưu danh sách kề. Để biết cụ thể cách làm, hãy đọc phần code nhé.
+
+Tiếp theo sẽ là cách cái đặt thuật toán BFS . Tư tưởng của BFS đơn giản là như sau:
+
+- Khởi đầu, thêm node gốc vào hàng đợi
+- Lấy node đầu tiên trong hàng đợi
+- Đánh dấu node đã đi qua. Đây là một chi tiết quan trọng do một cạnh trên cây đang xét là không có hướng nên nếu không đánh dấu thì một node sẽ được xét nhiều lần
+- Loại bỏ node đang xét khỏi hàng đợi
+- Thêm các node kề chưa được đánh dấu với node đang xét vào cuối hàng đợi
+- Quá trình kết thúc khi hàng đợi rỗng
 
 Cài đặt:
 ```cpp
@@ -388,8 +429,17 @@ void bfs(int s)
 		}
 	}
 }
-```
+``` 
+
+**Độ phức tạp thời gian của thuật toán là $O(n + m)$ với n là số đỉnh và m là số cạnh**
+
 ### **3. Đếm số thành phần liên thông của đồ thị vô hướng**
+
+> **Khái niệm thành phần liên thông của đồ thị vô hướng:** Trong lý thuyết đồ thị, một thành phần liên thông của một đồ thị vô hướng là một đồ thị con trong đó giữa bất kì hai đỉnh nào đều có đường đi đến nhau, và không thể nhận thêm bất kì một đỉnh nào mà vẫn duy trì tính chất trên. Một đồ thị liên thông có đúng một thành phần liên thông, chính là toàn bộ đồ thị.
+
+Các đỉnh được thăm sau khi thực hiện quá trình dfs hoặc bfs đều thuộc 1 thành phần liên thông (kể cả đỉnh gốc).
+
+Vậy chúng ta sẽ duyệt qua tất cả các đỉnh của đồ thị để đếm xem có bao nhiêu thành phần liên thông. Nếu gặp 1 đỉnh chưa được thăm (tức là nó không liên thông với các thành phần liên thông đã xét trước đó) thì tăng số lượng thành phần liên thông đang đếm lên 1 và tiến hành bfs (hoặc dfs) để đánh dấu tất cả các đỉnh liên thông với đỉnh đó.
 
 Cài đặt:
 ```cpp
@@ -402,6 +452,8 @@ for (int i = 1 ; i <= n ; ++i) {
 }
 cout << cnt << "\n";
 ```
+
+> Tuy thực hiện nhiều lần bfs (hoặc dfs) nhưng tổng số đỉnh được xét vẫn là n và số cạnh phải đi qua là m nên độ phức tạp của thuật toán vẫn là $O(n + m)$.
 
 ### **4. Tìm đường đi trên đồ thị không trọng số**
 
