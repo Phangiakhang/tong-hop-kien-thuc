@@ -51,8 +51,9 @@ title: "Tổng hợp kiến thức 📚"
     - [1. Dãy con tăng dài nhất - Longest Increasing Subsequence (LIS)](#1-dãy-con-tăng-dài-nhất---longest-increasing-subsequence-lis)
     - [2. Vali B - Knapsack 01 (Balo 01)](#2-vali-b---knapsack-01-balo-01)
     - [3. Bài toán biến đổi xâu](#3-bài-toán-biến-đổi-xâu)
-    - [4. Vali A - Knapsack](#4-vali-a---knapsack)
-    - [5. Nhân ma trận](#5-nhân-ma-trận)
+    - [4. Dãy con chung dài nhất - Longest Common Subsequence(LCS)](#4-dãy-con-chung-dài-nhất---longest-common-subsequence-lcs)
+    - [5. Vali A - Knapsack](#5-vali-a---knapsack)
+    - [6. Nhân ma trận](#6-nhân-ma-trận)
 - [**VI. ĐỒ THỊ**](#vi-đồ-thị)
     - [1. Tìm kiếm theo chiều sâu - Depth-First Search (DFS)](#1-tìm-kiếm-theo-chiều-sâu---depth-first-search-dfs)
     - [2. Tìm kiếm theo chiều rộng - Breadth-First Search (BFS)](#2-tìm-kiếm-theo-chiều-rộng---breadth-first-search-bfs)
@@ -320,7 +321,16 @@ for (int i = 1 ; i <= n ; ++i) {
 
 Cài đặt:
 ```cpp
-// Code
+int n; cin >> n;
+vector <int> a(n+1), b(n+1);
+int ma;
+for (int i = 1 ; i <= n ; ++i) cin >> a[i];
+for (int i = 1 ; i <= ; ++i) {
+    int j = lower_bound(b.begin()+1, b.begin()+ma+1, a[i]) - b - 1;
+    b[j+1] = a[i];
+    ma = max(ma, j+1);
+}
+cout << ma;
 ```
 
 ### **2. Vali B - Knapsack 01 (Balo 01)**
@@ -358,9 +368,69 @@ for (auto x:s) cout << w[x] << " " << v[x] << "\n";
 
 ### **3. Bài toán biến đổi xâu**
 
-### **4. Vali A - Knapsack**
+Cài đặt:
+```cpp
+string s1,s2; cin >> s1 >> s2;
+int n = s1.size(); 
+int m = s2.size();
+vector <vector <int>> dp(n+1, vector<int>(m+1, 0));
+s1 = " " + s1;
+s2 = " " + s2;
+for (int i = 0 ; i <= n ; ++i)
+    for (int j = 0 ; j <= m ; ++j)
+    {
+        if (i == 0)
+            dp[0][j] = j;
+        else if (j == 0)
+            dp[i][0] = i;
+        else if (s1[i] == s2[j])
+            dp[i][j] = dp[i-1][j-1];
+        else dp[i][j] = min({
+            dp[i-1][j-1],
+            dp[i-1][j],
+            dp[i][j-1]
+        }) +1;
+    }
+cout << dp[n][m] << "\n";
+```
 
-### **5. Nhân ma trận**
+### **4. Dãy con chung dài nhất - Longest Common Subsequence (LCS)**
+
+Cài đặt:
+```cpp
+string s1,s2; cin >> s1 >> s2;
+int n = s1.size(); 
+int m = s2.size();
+vector <vector <int>> dp(n+1, vector<int>(m+1, 0));
+s1 = " " + s1;
+s2 = " " + s2;
+string res = "";
+for (int i = 0 ; i <= n ; ++i) {
+    for (int j = 0 ; j <= m ; ++j)
+    {
+        if (i == 0 || j == 0)
+            dp[i][j] = 0;
+        else if (s1[i] == s2[j])
+            dp[i][j] = dp[i-1][j-1] + 1;
+        else dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+    }
+}
+int i = n, j = m;
+while (i > 0 && j > 0)
+{
+    if (dp[i][j] == dp[i-1][j-1] + 1 && s1[i] == s2[j]) {
+        res = s1[i] + res;
+        --i; --j;
+    }
+    else if (dp[i][j] == dp[i-1][j]) --i;
+    else if (dp[i][j] == dp[i][j-1]) --j;
+}
+cout << res;
+```
+
+### **5. Vali A - Knapsack**
+
+### **6. Nhân ma trận**
 
 # **VI. ĐỒ THỊ**
 
