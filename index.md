@@ -627,7 +627,8 @@ Cài đặt:
 Cài đặt:
 ```cpp
 vector <int> dir4 = { {0,1}, {0,-1}, {1,0}, {-1,0} } // Loang 4 hướng
-vector <int> dir8 = { {-1,-1}, {-1,0}, {-1,1}, {0,-1}, {0,1}, {1,-1}, {1,0}, {1,1} } // Loang 8 hướng
+vector <int> dir8 = { {-1,-1}, {-1,0}, {-1,1}, {0,-1}, 
+                      {0,1}, {1,-1}, {1,0}, {1,1} } // Loang 8 hướng
 void bfs(int i, int j)
 {
     queue <pair<int,int>> q;
@@ -638,7 +639,7 @@ void bfs(int i, int j)
         int v = q.front().second;
         q.pop();
 
-        for (auto it : dir4) { // for(auto it : dir 8)
+        for (auto it : dir4) { // for(auto it : dir8)
             int x = u + it.first;
             int y = v + it.second;
 
