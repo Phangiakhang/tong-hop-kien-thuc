@@ -430,7 +430,76 @@ cout << res;
 
 ### **5. Vali A - Knapsack**
 
+Cài đặt:
+```cpp
+vector<vector<int>> dp(n + 1, vector<int>(S + 1, 0));
+for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= S; ++j) {
+        dp[i][j] = dp[i - 1][j];
+        if (j >= w[i])
+            dp[i][j] = max(dp[i][j], dp[i][j - w[i]] + v[i]);
+    }
+}
+cout << dp[n][S] << "\n";
+```
+
 ### **6. Nhân ma trận**
+
+Template chuẩn:
+```cpp
+const int MATRIX_SIZE = 100;
+struct Matrix {
+    int m, n;
+    ll d[MATRIX_SIZE][MATRIX_SIZE];
+
+    Matrix(int _m = 0, int _n = 0) {
+        m = _m; n = _n;
+        memset(d, 0, sizeof d);
+    }
+
+    Matrix operator + (const Matrix &a) const {
+        Matrix res(m, n);
+        for (int i = 0; i < m; i++) for (int j = 0; j < n; j++) {
+            res.d[i][j] = d[i][j] + a.d[i][j];
+            if (res.d[i][j] >= MOD) res.d[i][j] -= MOD;
+        }
+        return res;
+    }
+
+    Matrix operator * (const Matrix &a) const {
+        int x = m, y = n, z = a.n;
+        Matrix res(x, z);
+        for (int i = 0; i < x; i++) for (int j = 0; j < y; j++)
+        for (int k = 0; k < z; k++) {
+            res.d[i][k] += 1LL * d[i][j] * a.d[j][k];
+            if (res.d[i][k] >= 1LL * MOD * MOD) res.d[i][k] -= 1LL * MOD * MOD;
+        }
+        for (int i = 0; i < x; i++) for (int k = 0; k < z; k++) res.d[i][k] %= MOD;
+
+        return res;
+    }
+
+    Matrix operator ^ (ll k) const {
+        Matrix res(n, n);
+        for (int i = 0; i < n; i++) res.d[i][i] = 1;
+        Matrix mul = *this;
+        while (k > 0) {
+            if (k & 1) res = res * mul;
+            mul = mul * mul;
+            k >>= 1;
+        }
+        return res;
+    }
+
+    ll* operator[] (int i) {
+        return d[i];
+    }
+
+    const ll* operator[] (int i) const {
+        return d[i];
+    }
+};
+```
 
 # **VI. ĐỒ THỊ**
 
@@ -550,21 +619,65 @@ Cài đặt:
 
 Cài đặt:
 ```cpp
-
+// Code
 ```
 
 *b. Cài đặt BFS*
 
 Cài đặt:
 ```cpp
-// Code
+vector <int> dir4 = { {0,1}, {0,-1}, {1,0}, {-1,0} } // Loang 4 hướng
+vector <int> dir8 = { {-1,-1}, {-1,0}, {-1,1}, {0,-1}, {0,1}, {1,-1}, {1,0}, {1,1} } // Loang 8 hướng
+void bfs(int i, int j)
+{
+    queue <pair<int,int>> q;
+    q.push({i,j});
+    vis[i][j] = true;
+    while (!q.empty()) {
+        int u = q.front().first;
+        int v = q.front().second;
+        q.pop();
+
+        for (auto it : dir4) { // for(auto it : dir 8)
+            int x = u + it.first;
+            int y = v + it.second;
+
+            if (x < 1 || y < 1 || x > n || y > m) continue;
+            if (!vis[x][y]) {
+                vis[x][y] = true;
+                q.push({x,y});
+            }
+        }
+    }
+}
 ```
 
 ### **6. Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1 (01BFS)**
 
 Cài đặt:
 ```cpp
-// Code
+void bfs(int k)
+{
+    deque<int> q;
+    q.push_back(k);
+    vis[k] = true;
+
+    while (!q.empty()) {
+        int x = q.front();
+        q.pop_front();
+
+        for (auto [v, w] : adj[x]) {
+            if (!vis[v]) {
+                if (w == 1)
+                    q.push_back(v);
+                else
+                    q.push_front(v);
+                vis[v] = true;
+                vet[v] = x;
+            }
+        }
+    }
+}
 ```
 
 ### **7. Tìm đường đi ngắn nhất trên ma trận**
@@ -589,14 +702,50 @@ Cài đặt:
 
 Cài đặt:
 ```cpp
-// Code
+vector<int> topo;
+
+void dfs(int u) {
+    vis[u] = true;
+    for (int v : adj[u]) {
+        if (!vis[v]) dfs(v);
+    }
+    topo.push_back(u); 
+}
+
+void topo_sort(int n) {
+    for (int i = 1; i <= n; ++i) {
+        if (!vis[i]) dfs(i);
+    }
+
+    reverse(topo.begin(), topo.end());
+}
 ```
 
 *b. Thuật toán Kahn - Xóa dần đỉnh*
 
 Cài đặt:
 ```cpp
-// Code
+void kahn()
+{
+    set <int> s; // Nếu không yêu cầu sắp xếp theo stt đỉnh thì sài queue
+    for (int i = n ; i > 0 ; --i) {
+        if (!in[i])
+            s.insert(i);
+    }
+
+    while (!s.empty()) {
+        int x = *s.begin();
+        s.erase(s.begin());
+        res.pb(x);
+
+        for (int it : adj[x]) {
+            --in[it];
+            if (!in[it]) {
+                s.insert(it);
+            }
+        }
+    }
+}
 ```
 
 ### **9. Kiểm tra chu trình của đồ thị**
