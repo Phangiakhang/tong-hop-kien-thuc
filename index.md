@@ -817,6 +817,7 @@ void prim(int s)
     priority_queue <ii, vii, greater<ii>> pq;
     pq.push({0, s});
     vector <edge> MST;
+    d[s] = 0;
 
     while (!pq.empty()) {
         ii top = pq.top();
@@ -840,7 +841,7 @@ void prim(int s)
             }
         }
     }
-    cout << res;
+    cout << res << endl;
     for (edge edges : MST) 
         cout << edges.node << " " << edges.parent << " " << edges.w << endl;
 }
