@@ -325,7 +325,7 @@ int n; cin >> n;
 vector <int> a(n+1), b(n+1);
 int ma;
 for (int i = 1 ; i <= n ; ++i) cin >> a[i];
-for (int i = 1 ; i <= ; ++i) {
+for (int i = 1 ; i <= n ; ++i) {
     int j = lower_bound(b.begin()+1, b.begin()+ma+1, a[i]) - b - 1;
     b[j+1] = a[i];
     ma = max(ma, j+1);
@@ -785,7 +785,65 @@ Cài đặt:
 
 Cài đặt:
 ```cpp
-// Code
+void prim(int s)
+{
+    priority_queue <ii, vii, greater<ii>> pq;
+    pq.push({0, s});
+
+    while (!pq.empty()) {
+        ii top = pq.top();
+        pq.pop();
+        int u = top.se;
+        int len = top.fi;
+        if (vis[u]) continue;
+        else {
+            d += len;
+            vis[u] = true;
+        }
+
+        for (auto [v,w] : adj[u]) {
+            pq.push({w,v});
+        }
+
+    }
+    cout << d;
+}
+```
+
+Truy vết:
+```cpp
+void prim(int s)
+{
+    priority_queue <ii, vii, greater<ii>> pq;
+    pq.push({0, s});
+    vector <edge> MST;
+
+    while (!pq.empty()) {
+        ii top = pq.top();
+        pq.pop();
+        int u = top.se;
+        int len = top.fi;
+
+        if (vis[u]) continue;
+
+        res += len;
+        vis[u] = true;
+        if (u != s) {
+            MST.pb({u, p[u], len});
+        }
+
+        for (auto [v,w] : adj[u]) {
+            if (!vis[v] && w < d[v]) {
+                pq.push({w,v});
+                d[v] = w;
+                p[v] = u;
+            }
+        }
+    }
+    cout << res;
+    for (edge edges : MST) 
+        cout << edges.node << " " << edges.parent << " " << edges.w << endl;
+}
 ```
 
 ### **14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)**
