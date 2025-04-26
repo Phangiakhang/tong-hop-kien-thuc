@@ -827,7 +827,7 @@ Cài đặt:
 ```cpp
 void prim(int s)
 {
-    priority_queue <pair <int,int>, vector <pair <int,int>>, greater<pair <int,int>>> pq;
+    priority_queue <ii, vii, greater<ii>> pq;
     pq.push({0, s});
 
     while (!pq.empty()) {
