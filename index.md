@@ -65,7 +65,7 @@ title: "Tổng hợp kiến thức 📚"
     - [8. Sắp xếp Topo - Thuật toán Kahn](#8-sắp-xếp-topo---thuật-toán-kahn)
     - [9. Kiểm tra chu trình của đồ thị](#9-kiểm-tra-chu-trình-của-đồ-thị)
     - [10. Thuật toán Kosaraju - Đếm số thành phần liên thông mạnh trên đồ thị có hướng](#10-thuật-toán-kosaraju---đếm-số-thành-phần-liên-thông-mạnh-trên-đồ-thị-có-hướng)
-    - [11. Disjoint Set Union - DSU**](#11-disjoint-set-union---dsu)
+    - [11. Disjoint Set Union - DSU](#11-disjoint-set-union---dsu)
     - [12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)](#12-thuật-toán-kruskal-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
     - [13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)](#13-thuật-toán-prim-tìm-cây-khung-nhỏ-nhất-minimum-spanning-tree)
     - [14. Thuật toán Tarjan - Bài toán đỉnh trụ (khớp) và cạnh (cầu)](#14-thuật-toán-tarjan---bài-toán-đỉnh-trụ-khớp-và-cạnh-cầu)
@@ -683,19 +683,7 @@ void bfs(int k)
 
 ### **7. Tìm đường đi ngắn nhất trên ma trận**
 
-*a. Cài đặt DFS*
-
-Cài đặt:
-```cpp
-// Code
-```
-
-*b Cài đặt BFS*
-
-Cài đặt:
-```cpp
-// Code
-```
+Sử dụng quy hoạch động di chuyển
 
 ### **8. Sắp xếp Topo - Thuật toán Kahn**
 
@@ -774,11 +762,63 @@ Cài đặt:
 
 ### **11. Disjoint Set Union - DSU**
 
+Cài đặt:
+```cpp
+vector <int> par(maxn);
+vector <int> sz(maxn);
+
+void init(int n) {
+    for (int i = 1 ; i <= n ; ++i) {
+        par[i] = i;
+        sz[i] = 1;
+    }
+}
+
+int find(int u) {
+    if (par[u] == u) return u;
+    return par[u] = find(par[u]);
+}
+
+bool unite(int u, int v) {
+    u = find(u);
+    v = find(v);
+    if (u == v) return false;
+    if (sz[u] > sz[v]) swap(u,v);
+    par[u] = v;
+    sz[v] += sz[u];
+    return true;
+}
+```
+
 ### **12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)**
 
 Cài đặt:
 ```cpp
-// Code
+struct edge {
+    int u,v,w;
+};
+
+void kruskal()
+{
+    vector <edge> mst;
+    int d = 0;
+
+    for (int i = 0 ; i < m ; ++i) {
+        if (mst.size() >= n-1) break;
+
+        edge e = edges[i];
+
+        if (unite(e.u, e.v)) {
+            mst.pb(e);
+            d += e.w;
+        }
+    }
+
+    cout << d << endl;
+    for (edge x : mst) {
+        cout << x.u << " " << x.v << " " << x.w << endl;
+    }
+}
 ```
 
 ### **13. Thuật toán Prim tìm cây khung nhỏ nhất (Minimum Spanning Tree)**
@@ -787,7 +827,7 @@ Cài đặt:
 ```cpp
 void prim(int s)
 {
-    priority_queue <ii, vii, greater<ii>> pq;
+    priority_queue <pair <int,int>, vector <pair <int,int>>, greater<pair <int,int>>> pq;
     pq.push({0, s});
 
     while (!pq.empty()) {
@@ -887,18 +927,34 @@ void dijkstra(int s)
 
 ### **16. Chu trình Euler và đường đi Euler**
 
-*a. Chu trình Euler*
-
 Cài đặt:
 ```cpp
-// Code
-```
+vector <set<int>> adj(maxn);
 
-*b. Đường đi Euler*
+void euler(int s)
+{
+    stack <int> st;
+    vi Euler;
+    st.push(s);
 
-Cài đặt:
-```cpp
-// Code
+    while (!st.empty()) {
+        int u = st.top();
+
+        if (!adj[u].empty()) {
+            int v = *adj[u].begin();
+            st.push(v);
+
+            adj[u].erase(v);
+            adj[v].erase(u);
+        }
+        else {
+            st.pop();
+            Euler.pb(u);
+        }
+    }
+    if (Euler.size() < n) cout << "IMPOSSIBLE";
+    else for (int &x : Euler) cout << x << " ";
+}
 ```
 
 ### **17. Chu trình Hamilton**
