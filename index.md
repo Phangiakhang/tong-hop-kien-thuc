@@ -619,7 +619,24 @@ Cài đặt:
 
 Cài đặt:
 ```cpp
-// Code
+vector <int> dir4 = { {0,1}, {0,-1}, {1,0}, {-1,0} } // Loang 4 hướng
+vector <int> dir8 = { {-1,-1}, {-1,0}, {-1,1}, {0,-1}, 
+                      {0,1}, {1,-1}, {1,0}, {1,1} } // Loang 8 hướng
+
+void dfs(int i, int j)
+{
+    vis[i][j] = true;
+    for (auto it : dir4) {
+        int u = i + it.fi;
+        int v = j + it.se;
+
+        if (u < 1 || v < 1 || u > n || v > n) continue;
+
+        if (!vis[u][v]) {
+            dfs(u,v);
+        }
+    }
+}
 ```
 
 *b. Cài đặt BFS*
@@ -792,7 +809,7 @@ bool unite(int u, int v) {
 
 ### **12. Thuật toán Kruskal tìm cây khung nhỏ nhất (Minimum Spanning Tree)**
 
-Cài đặt:
+Cài đặt (Có truy vết):
 ```cpp
 struct edge {
     int u,v,w;
