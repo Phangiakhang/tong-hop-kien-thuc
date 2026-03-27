@@ -1,14 +1,12 @@
 title: "Tổng hợp kiến thức 📚"
 
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 
-url: https://your-username.github.io
+url: https://phangiakhang.github.io/tong-hop-kien-thuc
 
-# Math (giữ lại)
 markdown: kramdown
 kramdown:
   math_engine: mathjax
 
-# Gợi ý thêm
 color_scheme: dark
 search_enabled: true
